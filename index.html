@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--=============== FAVICON ===============-->
+        <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+
+        <!--=============== REMIX ICONS ===============-->
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+        <!--=============== CSS ===============-->
+        <link rel="stylesheet" href="assets/css/styles.css">
+
+        <title>Leftover</title>
+    </head>
+    <body>
+        <!--==================== HEADER ====================-->
+        <header class="header" id="header">
+            <nav class="nav container">
+                <a href="#" class="nav__logo" >
+                   Leftover<span style="color: orange; margin-left: 0;">.</span>
+                </a>
+
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="#home" class="nav__link active-link">Accueil</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#about" class="nav__link">À propos</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#how" class="nav__link">Comment ça marche?</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#faqs" class="nav__link">FAQs</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#Vendors" class="nav__link">Commerce</a>
+                        </li>
+                    </ul>
+
+                    <div class="nav__close" id="nav-close">
+                        <i class="ri-close-line"></i>
+                    </div>
+                </div>
+
+                <div class="nav__btns">
+                    <!-- Theme change button -->
+                    <i class="ri-moon-line change-theme" id="theme-button"></i>
+
+                    <div class="nav__toggle" id="nav-toggle">
+                        <i class="ri-menu-line"></i>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <main class="main">
+            <!--==================== HOME ====================-->
+            <section class="home" id="home">
+                <div class="home__container container grid">
+                    <img src="imagess/lina.png" alt="" class="home__img">
+
+                    <div class="home__data">
+                        <h1 class="home__title">
+                           <span class="subtext">LUTTONS </span> contre le gaspillage  alimentaire <span class="subtext">ENSEMBLE</span><br> 
+                        </h1>
+                        <p class="home__description">
+                            Le gaspillage alimentaire est un problème, et nous sommes l'une des solutions. Leftover est 
+                            l'application qui vous permet de sauver d'un triste sort les invendus alimentaires de vos enseignes préférés.
+                        </p>
+                        <a href="signin.html" class="button button--flex" Onclick="window.location.href = 'signin.html';">S'authentifier
+                        <i class="ri-arrow-right-down-line button__icon"></i>
+                        </a>
+                    </div>
+
+                    <div class="home__social">
+                        <span class="home__social-follow">Découvrez plus en</span>
+
+                        <div class="home__social-links">
+                            <a href="https://www.facebook.com/" target="_blank" class="home__social-link">
+                                <i class="ri-facebook-fill"></i>
+                            </a>
+                            <a href="https://www.instagram.com/" target="_blank" class="home__social-link">
+                                <i class="ri-instagram-line"></i>
+                            </a>
+                            <a href="https://twitter.com/" target="_blank" class="home__social-link">
+                                <i class="ri-twitter-fill"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+           <!--==================== CONTACT ====================-->
+            <section class="contact section container" id="about">                
+                <div class="contact__container grid">
+                    <div class="contact__box">
+                        <h2 class="section__title">
+                            Notre <br> Mession ? <br>
+                        </h2>
+                        <div class="contact__data">
+                            <div class="contact__information">
+                                <span class="contact__description" >
+                                    Un tiers de la nourriture mondiale produite pour la consommation humaine est GASPILLÉE.
+                                </span>
+                                <br>
+                                <span class="contact__description" style="color: #46AEA2; font-weight:bold;">
+                                    NOUS VOULONS CHANGER CELA !
+                                </span>
+                                <br>
+                                <span class="contact__description">
+                                Faire en sorte que les bons aliments soient consommés et non gaspillés. 
+                                Chaque jour, des aliments frais et délicieux sont gaspillés dans 
+                                des restaurants,des snacks, 
+                                des  pâtisseries et des cafés-simplement parcequ'ils n'ont pas été vendus à temps .
+                                </span>
+                                 
+                                
+                            </div>
+                            <br>
+                        </div>
+                    </div>
+
+                    
+                    <div class="contact__inputs">
+                            <div class="contact__content">
+                                <img  src="imagess/Screenshot_236.png">
+                            </div>
+                    </div>
+                </div>
+            </section> 
+            <!--==================== PRODUCTS ====================-->
+            <section class="product section container" id="how">
+                <h2 class="section__title-center">
+                    LE BON GESTE POUR <br> LE BON GOÛT
+                </h2>
+
+                <p class="product__description">
+                    Une petite faim ? Avec l'appli Leftover, vous pouvez vous nourrir tout en ayant un impact. 
+                    Rendez-vous dans les restaurants et magasins près de chez vous pour récupérer de délicieux paniers surprises à petit prix.
+                </p>
+
+                <div class="product__container grid">
+                    <article class="product__card">
+                        <div class="product__circle"></div>
+
+                        <img src="imagess/Screenshot_224-removebg-preview.png" alt=""  id="pro_img" class="product__img">
+
+                        <h3 class="product__title">Découvrez</h3>
+                        <span 
+                        style='justify-content: center;
+                        margin-top: 20px;
+                        align-content: center; display: inline;'>des aliments délicieux à prix réduits autour de vous</span>
+
+                    </article>
+
+                    <article class="product__card">
+                        <div class="product__circle"></div>
+
+                        <img src="imagess/Screenshot_227-removebg-preview.png" alt="" class="product__img">
+                        <br>
+                        <h3 class="product__title">Pick-up</h3>
+                        <br><br>
+                        <span>des aliments délicieux provenant de magasins situés à proximité</span>
+
+                    </article>
+
+                    <article class="product__card">
+                        <div class="product__circle"></div>
+
+                        <img src="imagess/pngegg(63).png" alt="" class="product__img">
+
+                        <h3 class="product__title" style="margin-top: -12px;"> Profitez</h3>
+                        <span >d'un repas savoureux qui aide la planète </span>
+
+                    </article>
+
+                    
+                </div>
+            </section>
+             <!--==================== QUESTIONS ====================-->
+            <section class="questions section" id="faqs">
+                <h2 class="section__title-center questions__title container">
+                    CE QU'IL FAUT <br> SAVOIR 
+                </h2>
+
+                <div class="questions__container container grid">
+                    <div class="questions__group">
+                        <div class="questions__item">
+                            <header class="questions__header">
+                                <i class="ri-add-line questions__icon"></i>
+                                <h3 class="questions__item-title">
+                                    Quel type de produits puis-je trouver sur l’application ?
+                                </h3>
+                            </header>
+                       
+                            <div class="questions__content">
+                                <p class="questions__description"> 
+                                    Il y en a pour tous les goûts car de nombreux commerçants ont des invendus :  des pâtisseries, 
+                                     des restaurants, des snacks, et même des cafes ! Tu auras l'embarras du choix.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="questions__item">
+                            <header class="questions__header">
+                                <i class="ri-add-line questions__icon"></i>
+                                <h3 class="questions__item-title">
+                                    Combien ça coûte ?
+                                </h3>
+                            </header>
+
+                            <div class="questions__content">
+                                <p class="questions__description">
+                                 L’application se télécharge gratuitement. Tu ne payes que pour les paniers que tu décides de sauver !
+                                </p>
+                            </div>
+                        </div>
+                        <div class="questions__item">
+                            <header class="questions__header">
+                                <i class="ri-add-line questions__icon"></i>
+                                <h3 class="questions__item-title">
+                                    Où puis-je trouver une liste de tous les commerçants dans mon quartier ?
+                                </h3>
+                            </header>
+
+                            <div class="questions__content">
+                                <p class="questions__description">
+                                    Dans l'application, tu verras tous les commerces qui 
+                                    proposent des paniers surprises aux alentours. L'appli est gratuite, tu trouveras donc facilement.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="questions__item">
+                            <header class="questions__header">
+                                <i class="ri-add-line questions__icon"></i>
+                                <h3 class="questions__item-title">
+                                    En quoi mon commerce en profite-t-il  ?
+                                </h3>
+                            </header>
+
+                            <div class="questions__content">
+                                <p class="questions__description">                           
+                               L'application Leftover vous permet de diminuer le gaspillage alimentaire et de récupérer de l'argent sur des invendus qui autrement auraient été jetés, c'est gagnant-gagnant. De plus, 
+                               76 % des clients qui découvrent un commerce via Leftover reviennent en tant que clients à part entière.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="questions__group">
+                        <div class="questions__item">
+                            <header class="questions__header">
+                                <i class="ri-add-line questions__icon"></i>
+                                <h3 class="questions__item-title">
+                                    Quelle quantité de travail supplémentaire pour mon entreprise ?
+                                </h3>
+                            </header>
+
+                            <div class="questions__content">
+                                <p class="questions__description">
+                                    À peine plus qu'il n'en faut pour jeter de la nourriture ! Il faut simplement mettre de côté vos invendus 
+                                     pour qu'ils soient récupérés par un client. Au moment de la collecte, le client montre son reçu digital et vous lui remettez son panier.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="questions__item">
+                            <header class="questions__header">
+                                <i class="ri-add-line questions__icon"></i>
+                                <h3 class="questions__item-title">
+                                    Dois-je interagir avec les autres utilisateurs ?
+                                </h3>
+                            </header>
+
+                            <div class="questions__content">
+                                <p class="questions__description">
+                                    Il vous suffit de vérifier le reçu digital de l'utilisateur en lui remettant son panier surprise. Leftover s'occupe 
+                                    des fonctionnalités de l'application, de la mise en ligne de l'offre, de traiter les retours des utilisateurs, etc.
+                                </p>
+                            </div>
+                        </div>
+
+                       
+                    </div>
+                </div>
+            </section>
+            <!--==================== ABOUT ====================-->
+            <section class="about section container" id="Vendors">
+                <div class="about__container grid">
+                    <div class="grid-gallery" >
+            
+                        <div class="grid-item">
+                          <a href="imagess/pexels-gary-barnes-6232000.jpg" data-lightbox="gridImage">
+                            <img src="imagess/pexels-gary-barnes-6232000.jpg" />
+                          </a>
+                        </div>
+                        <div class="grid-item">
+                          <a href="imagess/pexels-hussein-haidar-salman-15012786.jpg" data-lightbox="gridImage">
+                            <img src="imagess/pexels-hussein-haidar-salman-15012786.jpg" />
+                          </a>
+                        </div>
+                       
+                        <div class="grid-item">
+                          <a href="imagess/cafe.jpg" data-lightbox="gridImage">
+                            <img src="imagess/cafe.jpg" />
+                          </a>
+                        </div>
+                      </div>
+
+                    <div class="about__data">
+                        <h2 class="section__title about__title">
+                            CRÉEZ DE LA VALEUR AVEC VOS INVENDUS <br> 
+                        </h2>
+
+                        <p class="about__description">
+                            Tout n'est pas parti ? Nous pouvons aider ! Rejoignez des milliers de commerces sur 
+                            l'appli Leftover et faites le bonheur de vos clients en donnant une seconde chance à vos invendus.
+                        </p>
+
+                        <div class="about__details">
+                            <p class="about__details-description">
+                                <i class="ri-checkbox-fill about__details-icon"></i>
+                                JETEZ MOINS POUR LE BIEN DE L'ENVIRONNEMENT.
+                            </p>
+                            <p class="about__details-description">
+                                <i class="ri-checkbox-fill about__details-icon"></i>
+                                DES INVENDUS CHANGÉS EN REVENUS SANS AUCUN EFFORT, OU PRESQUE
+                            </p>
+                            <p class="about__details-description">
+                                <i class="ri-checkbox-fill about__details-icon"></i>
+                                GAGNEZ EN VISIBILITÉ ET ATTIREZ DE NOUVEAUX CLIENTS.
+                            </p>
+                           
+                        </div>
+
+                        <a href="vendeur.html" class="button button--flex">
+                            Enregistrez votre commerce <i class="ri-arrow-right-down-line button__icon"></i>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!--==================== STEPS ====================-->
+            <section class="steps section container" id="clients">
+                <div class="steps__bg" >
+                    <h2 class="section__title-center steps__title">
+                        Etes-vous prêt ?
+                    </h2>
+
+                    <div class="steps__container grid">
+                        <div class="steps__card">
+                            <div class="steps__card-number">
+                                <img src="imagess/Screenshot_239-removebg-preview.png" />
+                            </div>
+                            <h3 class="steps__card-title">Faire partie de la communauté et  économiser de la nourriture délicieuse</h3>
+                            <p class="steps__card-description">
+                               L'appli Leftover vous permet de récupérer des aliments délicieux et invendus 
+                               auprès des entreprises pour éviter qu'ils ne soient jetés.
+                            </p>
+                        </div>
+                    </div>
+                    <a href="SignUpForClient.html" class="button button--flex" style='margin-top: 20px; display: flex; justify-content: center; align-items: center; margin-left:310px;  margin-right:310px;'>
+                        S'inscrire aujourd'hui !<i class="ri-arrow-right-down-line button__icon"></i>
+                    </a>
+                </div>
+            </section>
+
+        
+
+           
+
+            
+        </main>
+      
+        <!--==================== FOOTER ====================-->
+        <footer class="footer section">
+            <div class="footer__container container grid">
+                <div class="footer__content">
+                    <a href="#" class="footer__logo" >
+                        Leftover<span style="color: orange; margin-left: 0;">.</span>
+                     </a>
+
+                    <h3 class="footer__title">
+                        Nous aidons à rendre le monde meilleur, où la bonne nourriture  <br> va aux humains plutôt qu'à la poubelle.
+                    </h3>
+                    
+                        <div class="footer__social">
+                            <a href="https://www.facebook.com/" class="footer__social-link">
+                                <i class="ri-facebook-fill"></i>
+                            </a>
+                            <a href="https://www.instagram.com/" class="footer__social-link">
+                                <i class="ri-instagram-line"></i>
+                            </a>
+                            <a href="https://twitter.com/" class="footer__social-link">
+                                <i class="ri-twitter-fill"></i>
+                            </a>
+                        </div>
+                    </ul>
+                </div>
+
+                <div class="footer__content">
+                    <h3 class="footer__title">Liens Utiles</h3>
+
+                    <ul class="footer__data">
+                        <li class="footer__information">Conditions de service</li>
+                        <li class="footer__information">Confidentialité et Politique</li>
+                        <li class="footer__information">Support</li>
+                    </ul>
+                </div>
+
+                <div class="footer__content">
+                    <h3 class="footer__title">Adresse</h3>
+
+                    <ul class="footer__data">
+                        <li class="footer__information">Rue Hassan 2 ,<br>
+                            80 000,<br>
+                            Agadir , Maroc</li>
+                    </ul>
+                </div>
+
+                <div class="footer__content">
+                    <h3 class="footer__title">Contact-nous</h3>
+
+                    <ul class="footer__data">
+                        <li class="footer__information">+212 7449 904 49</li>
+                        <li class="footer__information">Leftover46@gmail.com</li>
+                        <br>
+                </div>
+            </div>
+
+            <p class="footer__copy">&#169;  2022 Leftover. All Right Reserved</p>
+        </footer>
+        
+        <!--=============== SCROLL UP ===============-->
+        <a href="#" class="scrollup" id="scroll-up"> 
+            <i class="ri-arrow-up-fill scrollup__icon"></i>
+        </a>
+
+        <!--=============== SCROLL REVEAL ===============-->
+        <script src="assets/js/scrollreveal.min.js"></script>
+        
+        <!--=============== MAIN JS ===============-->
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>
