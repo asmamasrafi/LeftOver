@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover">
+    <title>LEFTOVER</title>
+    <link rel="stylesheet" href="client.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+JP&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <script src="https://kit.fontawesome.com/3929e16ef5.js" crossorigin="anonymous"></script>
+   <script src="{% static 'network/functions.js' %}"></script>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,900&display=swap" rel="stylesheet">
+<script src="client.js" defer></script>
+
+<link href="https://unicons.iconscout.com/release/v2.1.6/css/unicons.css" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,900&display=swap" rel="stylesheet">
+
+
+
+<link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    
+<!--<title>Dashboard Sidebar Menu</title>--> 
+</head>
+<body>
+   
+    <h3 class="logo">Leftover<span class="span">•</span>
+       <i class='fa fa-shopping-cart' onclick="document.location='paiementdetails.html'"></i>
+    </h3>
+    
+<nav class="sidebar close">
+    <header>
+       
+
+        <i class='bx bx-chevron-right toggle'></i>
+    </header>
+
+    <div class="menu-bar">
+        <div class="menu">
+
+            <li class="search-box">
+                <i class='bx bx-map icon'></i>
+                <input type="text" placeholder="Agadir,rue34..">
+            </li>
+
+            <ul class="menu-links">
+                <li class="nav-link">
+                    <a href="#">
+                        <i class='bx bx-home-alt icon' onclick="document.location='client.html'"></i>
+                        <span class="text nav-text">L'accueil</span>
+                    </a>
+                </li>
+
+                <li class="nav-link">
+                    <a href="#">
+                        <i class='bx bx-search icon' onclick="document.location='search.html'"></i>
+                        <span class="text nav-text" id="carto">Recherche</span>
+                    </a>
+                </li>
+
+                <li class="nav-link" >
+                    <a id="notification-icon">
+                        <i class='bx bx-bell icon' ><small class="notification-count">4+</small></i>
+                        <span class="text nav-text">Notifications</span>
+                        <!-----Notifiaction poop-->
+                        <div class="Notification-poop" >
+                            <div>
+                                <div class="profil-photo">
+                                    <img src="images/logo1.png"  height="40" width="40">
+                                </div>
+                            <div class="notification-body">
+                                <b>Macdonald's </b> send you the code of verfication
+                                <small class="text-muted">2 DAYS AGO</small>
+                            </div>
+                            </div>
+                        
+                            <div>
+                                <div class="profil-photo">
+                                    <img src="images/logo2.png" height="40" width="40" >
+                                </div>
+                            <div class="notification-body">
+                                <b>Macdonald's </b> send you the code of verfication
+                                <small class="text-muted">2 DAYS AGO</small>
+                            </div>
+                            </div>
+                        
+                            
+                            <div>
+                                <div class="profil-photo">
+                                    <img src="images/logo1.png" height="40" width="40" >
+                                </div>
+                            <div class="notification-body">
+                                <b>Macdonald's </b> send you the code of verfication
+                                <small class="text-muted">2 DAYS AGO</small>
+                            </div>
+                            </div>
+                            
+                            <div>
+                                <div class="profil-photo">
+                                    <img src="images/logo1.png" height="40" width="40" >
+                                </div>
+                            <div class="notification-body">
+                                <b>Macdonald's </b> send you the code of verfication
+                                <small class="text-muted">2 DAYS AGO</small>
+                        </div>
+                        </div>                        
+                        </div>
+                    </a>
+                </li>
+
+          
+           
+
+                <li class="nav-link"  >
+                    <a href="#">
+                        <i class='bx bx-shopping-bag icon' ></i>
+                        <span class="text nav-text">Commandes</span>
+                    </a>
+                    
+                </li>
+                <li class="nav-link">
+                    <a href="#">
+                        <i class='bx bx-user icon' onclick="document.location='profile_details.html'"></i>
+                        <span class="text nav-text">Profile</span>
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+
+        <div class="bottom-content">
+            <li class="">
+                <a href="#">
+                    <i class='bx bx-log-out icon' ></i>
+                    <span class="text nav-text">Logout</span>
+                </a>
+            </li>
+
+          
+            
+        </div>
+    </div>
+
+ </nav>
+
+
+
+ <script>
+    const body = document.querySelector('body'),
+  sidebar = body.querySelector('nav'),
+  toggle = body.querySelector(".toggle"),
+  searchBtn = body.querySelector(".search-box"),
+  modeSwitch = body.querySelector(".toggle-switch"),
+  modeText = body.querySelector(".mode-text");
+
+
+toggle.addEventListener("click" , () =>{
+sidebar.classList.toggle("close");
+})
+
+searchBtn.addEventListener("click" , () =>{
+sidebar.classList.remove("close");
+})
+
+modeSwitch.addEventListener("click" , () =>{
+body.classList.toggle("dark");
+
+if(body.classList.contains("dark")){
+    modeText.innerText = "Light mode";
+}else{
+    modeText.innerText = "Dark mode";
+    
+}
+});
+
+
+    var counter = 1;
+    setInterval(function(){
+      document.getElementById('radio' + counter).checked = true;
+      counter++;
+      if(counter > 4){
+        counter = 1;
+      }
+    }, 5000);
+ </script>
+ 
+    <!-- maindashboard-->
+    
+       <div class="dashboard">
+        
+        <!--image slider start-->
+        <div class="slider">
+            <div class="slides">
+              <!--radio buttons start-->
+              <input type="radio" name="radio-btn" id="radio1">
+              <input type="radio" name="radio-btn" id="radio2">
+         
+              <!--radio buttons end-->
+              <!--slide images start-->
+              <div class="slide first">   
+                
+                <img src="images/Disc. 30% (6).png" alt="">
+                 
+              </div>
+             
+              <div class="slide">
+               <img src="images/WhatsApp Image 2023-04-05 at 22.40.58.jpeg" alt="">
+              </div>
+              <!--slide images end-->
+              <!--automatic nigation start-->
+              <div class="navigation-auto">
+                <div class="auto-btn1"></div>
+                <div class="auto-btn2"></div>
+              
+              </div>
+              <!--automatic navigation end-->
+            </div>
+            <!--manual navigation start-->
+            <div class="navigation-manual">
+              <label for="radio1" class="manual-btn"></label>
+              <label for="radio2" class="manual-btn"></label>
+              
+            </div>
+            <!--manual navigation end-->
+          </div>
+          <!--image slider end-->
+       
+        <h3 class="dashbord-title">Recommandé Pour Vous</h3>
+        <div class="dashboard-menu">
+            <a href="#favouris">Favouris</a>
+            <a href="#bestseler">Meilleur Vendeur</a>
+            <a href="#Près de Moi">Près de Moi</a>
+            <a href="#Promotion">Promotion</a>
+            <a href="tous.html">Tous</a>
+        </div>
+       
+
+
+
+          
+        <section class="dashbord-content" >
+           
+          <!--image slider end--> <div class="dashboard-cart" data-product-id="1">
+               
+                <img class="cart-image" src="images/image17.jpg"><p class="left">1 left</p>
+                 
+                <div class="card"> 
+                    <div class="heart">
+                    <span> <i class="fa fa-heart heart-icon product1-heart"></i></span>
+                
+              </div>
+              
+              <img src="images/logo1.png" alt="" class="dis"> 
+                  <div class="cart-detail">
+                  <h2>Mister Cook</h2>
+                    <h4>Surpise Bag</h4>
+                    <p class="cart-time"><span class="fa fa-clock-o">
+                    </span>récupérer aujourd'hui : 15:30 -19:00</p>
+                </div>
+            </div>
+ </div>
+                <div class="dashboard-cart" data-product-id="2">
+                    <img class="cart-image" src="images/image16.jpg"><p class="left">1 rest</p>
+                    <div class="card" >
+                        <div class="heart">
+                            <span> <i class="fa fa-heart heart-icon product2-heart"></i></span>
+                         
+                     </div>
+                      <img src="images/McDonalds-Logo__1_-modified-removebg-preview (1).png" alt="" class="dis">
+                    
+                    <div class="cart-detail">
+                        <h2>Mc Donald's</h2>
+                        <h4>Surprise Bag</h4>
+                        <p class="cart-time"><span class="fa fa-clock-o">
+                        </span>récupérer demain : 12:30 -14:00</p>
+                    </div>
+                 </div>
+                </div>
+
+                <div class="dashboard-cart" data-product-id="3">
+                    <img class="cart-image" src="images/120904083_129764615542915_2123990694166447632_n.jpg"><p class="left">1 rest</p>
+                    <div class="card" > 
+                        <div class="heart">
+                            <span> <i class="fa fa-heart heart-icon product2-heart"></i></span>
+                         
+                     </div>
+                            <img src="images/logo7.png" alt="" class="dis"> 
+                    <div class="cart-detail">
+                        <h2>KFS</h2>
+                        <h4>Surprise Bag</h4>
+                        <p class="cart-time"><span class="fa fa-clock-o">
+                        </span>récupérer demain : 12:30 -14:00</p>
+                    </div>
+                </div>
+                </div>
+                        <div class="dashboard-cart" data-product-id="4">
+                            <img class="cart-image" src="images/kaitlin-dowis-VjM2t7VH9Uo-unsplash.jpg"><p class="left">1 rest</p>
+                            <div class="card" > 
+                                <div class="heart">
+                                    <span><i class="fa fa-heart heart-icon product3-heart"></i></span>
+                               
+                             </div>
+                                     <img src="images/logo4.png" alt="" class="dis"> 
+
+                            <div class="cart-detail">
+                                <h2>Le Petit Pecheur</h2>
+                                <h4>Surprise Bag</h4>
+                                <p class="cart-time"><span class="fa fa-clock-o">
+                                </span>récupérer demain : 12:30 -14:00</p>
+                            </div>
+                        </div>
+                        </div>
+                            <div class="dashboard-cart" data-product-id="5">
+                                <img class="cart-image" src="images/elisheva-gohar-nyekPQwZbgw-unsplash.jpg"><p class="left">1 rest</p>
+                                <div class="card"> 
+                                    <div class="heart">
+                                        <span> <i class="fa fa-heart heart-icon product4-heart"></i></span>
+                                 </div>
+                                        <img src="images/logo2.png" alt="" class="dis"> 
+                                <div class="cart-detail">
+                                    <h2>Le Sesame Patisserie</h2>
+                                    <h4>Surprise Bag</h4>
+                                    <p class="cart-time"><span class="fa fa-clock-o">
+                                    </span>récupérer demain : 12:30 -14:00</p>
+                                </div>
+                            </div>
+                            </div>
+                                <div class="dashboard-cart" data-product-id="6">
+                                    <img class="cart-image" src="images/120904083_129764615542915_2123990694166447632_n.jpg"><p class="left">1 rest</p>
+                                    <div class="card" > 
+                                        <div class="heart">
+                                            <span> <i class="fa fa-heart heart-icon product5-heart"></i></span>
+                                     </div>
+                                            <img src="images/logo7.png" alt="" class="dis">
+                                    <div class="cart-detail">
+                                        <h2>KFS</h2>
+                                        <h4>Surprise Bag</h4>
+                                        <p class="cart-time"><span class="fa fa-clock-o">
+                                        </span>récupérer demain : 12:30 -14:00</p>
+                                    </div> 
+                                </div>
+                                </div>
+
+                               
+                               
+                                <div class="dashboard-cart" data-product-id="7" >
+                                    <img class="cart-image" src="images/image14.jpg"><p class="left">1 rest</p>
+                                    <div class="card" > 
+                                        <div class="heart">
+                                            <span> <i class="fa fa-heart heart-icon product6-heart"></i></span>
+                                    </div>
+                                        <img src="images/logo6.png" alt="" class="dis"> 
+                                    <div class="cart-detail" onclick="document.location='restoprofile.html'">
+                                        <h2>Frunk's Burgers</h2>
+                                        <h4>Surprise Bag</h4>
+                                        <p class="cart-time"><span class="fa fa-clock-o">
+                                        </span>récupérer aujourd'hui: 12:30 -14:00</p>
+                                    </div>
+                                </div>
+                                </div>
+                                <div class="dashboard-cart" data-product-id="8">
+                                    
+                                    <img class="cart-image" src="images/image15.jpg"><p class="left">1 rest</p>
+                                    <div class="card" > 
+                                        <div class="heart">
+                                            <span> <i class="fa fa-heart heart-icon product7-heart"></i></span>
+                                     </div>
+                                        <img src="images/logo8.png" alt="" class="dis"> 
+                                   
+                                    <div class="cart-detail">
+                                        <h2>Fresh Mania</h2>
+                                        <h4>Surprise Bag</h4>
+                                        <p class="cart-time"><span class="fa fa-clock-o">
+                                        </span>récupérer aujourd'hui: 12:30 -14:00</p>
+                                    </div>
+                                     </div>
+                                </div> 
+                            </section>
+
+                            <div class="coupon" id="Promotion">
+                                <div class="container">
+                                  <h3>Leftover<span class="span">•</span></h3>
+                                </div>
+                                
+                                <div class="container" >
+                                  <h2><b>10% SUR VOS ACHATS</b></h2>
+                                  <p>lors de votre troisième commande, vous aurez reçu <span style="font-weight: 800;" class="code">un code de réduction</span> en guise de remerciement pour votre fidélité et pour vous encourager à vous engager et à lutter contre le gaspillage alimentaire.</p>
+                                </div>
+                                <div class="container">
+                                  <p class="expire"><i class="fa fa-lightbulb-o"></i>APRÈS 3 COMMANDES !</p>
+                                </div>   <button class="buttonpromo" onclick="show_pup()"> Code Promo</button>
+                              </div>
+                           
+                             
+                            <div class="lacard" id="pup">
+                                <div class="ilustration">
+                                    <img src="images/124348-sad-face.gif" background="white" speed="1" loop autoplay>
+                                </div>
+                                <h3>Désolé(e)</h3>
+                                <p>malheureusement !, Vous n'avez pas dépassé trois commandes pour pouvoir bénéficier du code promo. Nous vous invitons à réessayer ultérieurement.</p>
+                                <span style="font-weight: 800;color: rgb(255, 20, 20);">Code Promo : </span>
+                                <button onclick="hide_pup()">Continue</button>
+                            </div>
+                            
+                          
+                            <script>
+                         function show_pup(){
+                            document.getElementById('pup').classList.add('open');
+                         }
+                         function hide_pup(){
+                            document.getElementById('pup').classList.remove('open');
+                         }
+                         
+                            </script>
+                            <!-- favourisdashboard-->
+                         <div class="favouris-top" id="favouris"> 
+                            
+                          <h3 class="favouris-title"  >Favouris</h3>
+                         
+                        </div>
+                           <section class="dashbord-favouris" >
+                             <div class="card1">
+                                <strong> Ajouter au Favouris ! </strong> <p> <br>touchez l'icône en forme de cœur sur un magasin pour l'ajouter à vos favoris et il apparaîtra ici.</p>
+                                <div class="ilustration">
+                                    <img src="images/9787-heart-like.gif" background="white" speed="1" loop autoplay>
+                                </div>
+                              </div>
+                              <div class="favorit-liste"></div>
+                        </section>
+                            
+
+                    
+                    
+                         <!-- bestseler_dashboard-->
+                         <div class="bestseler" id="bestseler">
+                        <h3 class="bestseler-title"  >Meilleur Vendeur</h3>
+                        <div class="dashbord-bestseler">
+                       
+
+                        <div class="bestseler-cart">
+                            <img class="cart-image" src="images/elisheva-gohar-nyekPQwZbgw-unsplash.jpg"><p class="left">1 rest</p>
+                            <div class="card">
+
+                                <div class="heart" onclick="ShowHeart()">
+                                    <span> <i class="fa fa-heart" id="hide1" ></i></span>
+                               
+                             </div>
+                                <img src="images/logo2.png" alt="" class="dis"> </div>
+                            <div class="cart-detail">
+                                <h2>Le Sesame Patisserie </h2>
+                                <h4>Surprise Bag<span>8.99DH</span></h4>
+                                <p class="cart-time"><span class="fa fa-clock-o">
+                                </span>récupérer aujourd'hui: 12:30 -14:00</p>
+                            </div>  
+                        </div>
+
+
+                        <div class="bestseler-cart">
+                            <img class="cart-image" src="images/image15.jpg"><p class="left">1 rest</p>
+                            <div class="card">
+
+                                <div class="heart" onclick="ShowHeart()">
+                                    <span> <i class="fa fa-heart" id="hide1" ></i></span>
+                            
+                             </div>
+                                <img src="images/logo8.png" alt="" class="dis"> </div>
+                            <div class="cart-detail">
+                                <h2>Fresh Mania</h2>
+                                <h4>Surprise Bag<span>8.99DH</span></h4>
+                                <p class="cart-time"><span class="fa fa-clock-o">
+                                </span>récupérer aujourd'hui: 12:30 -14:00</p>
+                            </div>  
+                        </div>
+                        </div>
+                        
+                    </div>  
+
+                         <!-- nearTome_dashboard-->
+                         <div class="PrèsMoi-top" > 
+                         <h3 class="PrèsMoi-title"  id="Près de Moi">Près de Moi</h3>
+                           <div class="dashbord-PrèsMoi"  >
+                            <div class="PrèsMoi-cart">
+                                <img class="cart-image" src="images/image13.jpg"><p class="left">1 rest</p>
+                                <div class="card">
+
+                                    <div class="heart" onclick="ShowHeart()">
+                                        <span> <i class="fa fa-heart" id="hide1" ></i></span>
+                                  
+                                 </div>
+                                    <img src="images/logo5.png" alt="" class="dis"> </div>
+                                <div class="cart-detail">
+                                    <h2>La Roche D'agadir</h2>
+                                    <h4>Surprise Bag<span>8.99DH</span></h4>
+                                    <p class="cart-time"><span class="fa fa-clock-o">
+                                    </span>récupérer aujourd'hui: 12:30 -14:00</p>
+                                </div>  
+                            </div>
+                            <div class="PrèsMoi-cart">
+                                <img class="cart-image" src="images/image14.jpg"><p class="left">1 rest</p>
+                                <div class="card">  
+                                   <div class="heart" onclick="ShowHeart()">
+                                       <span> <i class="fa fa-heart" id="hide1" ></i></span>
+                               
+                                </div>
+                                    <img src="images/logo6.png" alt="" class="dis"> </div>
+                                <div class="cart-detail">
+                                    <h2>Frunk's Burgers</h2>
+                                    <h4>Surprise Bag<span>8.99DH</span></h4>
+                                    <p class="cart-time"><span class="fa fa-clock-o">
+                                    </span>récupérer aujourd'hui: 12:30 -14:00</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+                </div>   
+
+</body>
+</html>
