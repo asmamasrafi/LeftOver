@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Boxicons -->
+	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+	<!-- My CSS -->
+	<link rel="stylesheet" href="dashboardVendeur.css">
+	<link rel="stylesheet" href="dashboardComantaire.css">
+	<!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <!-- Fontawesome CDN Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+	<!-- cmnt -->
+	<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" /> -->
+	<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" /> -->
+<!-- Charts -->
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+<!-- Test -->
+<link rel="stylesheet" href="dashboardRecent.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+    <script
+  src="https://code.jquery.com/jquery-3.6.3.js" ></script>
+<script>
+    $(document).ready(function(){
+        $(".profile .icon_wrap").click(function(){
+            $(this).parent().toggleClass("active");
+			$(".switch-mode").removeClass("active");
+            $(".notifications").removeClass("active");
+        });
+        $(".notifications .icon_wrap").click(function(){
+            $(this).parent().toggleClass("active");
+            $(".profile").removeClass("active");
+        });
+        $(".link").click(function(){
+            $(".notifications").removeClass("active");
+			$(".switch-mode").removeClass("active");
+            $(".popup").addClass("active");
+			
+        });
+        $(".close").click(function(){
+            $(".popup").removeClass("active");
+			
+			$(".switch-mode").removeClass("active");
+           
+        });
+
+    
+    });
+</script>
+	<title>AdminHub</title>
+</head>
+<body>
+	<!-- SIDEBAR -->
+	<section id="sidebar">
+		<a href="#" class="brand">
+			<i class='bx bxs-smile'></i>
+			<span class="text logo">LeftOver<span class="span">.</span></span>
+		</a>
+		<ul class="side-menu top">
+			<li class="active">
+				<a href="#">
+					<i class='bx bxs-dashboard' ></i>
+					<span class="text">Dashboard</span>
+				</a>
+			</li>
+			<li>
+				<a href="agendatVendeur.html">
+					<i class="bx bxs-calendar"></i>
+					<span class="text">Calandrier
+					</span>
+				</a>
+			</li>
+			<li>
+				<a href="paquetVendeur.html">
+					<i class='bx bxs-shopping-bag-alt' ></i>
+					<span class="text">Paquets</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<i class='bx bxs-doughnut-chart' ></i>
+					<span class="text">Analytics</span>
+				</a>
+			</li>
+		</ul>
+		<ul class="side-menu">
+			<li>
+				<a href="#">
+					<i class='bx bxs-cog' ></i>
+					<span class="text">Settings</span>
+				</a>
+			</li>
+			<li>
+				<a href="#" class="logout">
+					<i class='bx bxs-log-out-circle' ></i>
+					<span class="text">Logout</span>
+				</a>
+			</li>
+		</ul>
+	</section>
+	<!-- SIDEBAR -->
+
+	<!-- CONTENT -->
+	<section id="content">
+		<!-- NAVBAR -->
+		<nav>
+			<i class='bx bx-menu' ></i>
+			<a href="#" class="nav-link">Categories</a>
+			<form action="#">
+				<div class="form-input">
+					<input type="search" placeholder="Search...">
+					<button type="submit" class="search-btn"><i class='bx bx-search' ></i></button>
+				</div>
+			</form>
+			<input type="checkbox" id="switch-mode" hidden>
+			<label for="switch-mode" class="switch-mode active"></label>
+			<div class="navbar_right">
+				<div class="notifications ">
+		   <div class="icon_wrap">
+		 <i class="fa fa-bell"></i>
+		   </div>
+				</div>
+				<div class="profile">
+				 <div class="icon_wrap">
+					 <img src="image/cus2.jpg" alt="">
+					 <span class="name">Saida Be</span>
+					 <i class="fas fa-chevron-down"></i>
+				 </div>
+				 <div class="profile_dd">
+					 <ul class="profile_ul">
+						 <li class="profile_li">
+							 <a class="profile" href="#">
+								 <span class="picon">
+									 <i class="fas fa-user-alt" aria-hidden="true"></i>
+								 </span>
+								 Profile
+							 </a>
+							 <div class="btn">My Account</div>
+						 </li>
+						
+					 </ul>
+				 </div>
+				</div>
+			 </div>
+		 </div>
+		
+		</nav>
+		<!-- NAVBAR -->
+
+		<!-- MAIN -->
+		<main>
+
+			<div class="head-title">
+				<div class="left">
+					<h1>Dashboard</h1>
+					<ul class="breadcrumb">
+						<li>
+							<a href="#">Dashboard</a>
+						</li>
+						<li><i class='bx bx-chevron-right' ></i></li>
+						<li>
+							<a class="active" href="#">Home</a>
+						</li>
+					</ul>
+				</div>
+				<a href="#" class="btn-download">
+					<i class='clock' ></i>
+					
+					<span class="display"></span>
+					<!-- <div class="">
+						<div class="">
+						</div>
+					</div> -->
+				</a>
+			</div>   
+			<ul class="box-info">
+				<li>
+					<img class="bx" src="image/order1.png">
+					<span class="text">
+						<h3>1020</h3>
+						<p>Total Order</p>
+						<h5 style="color: green; ">+1.2%</h5>
+					</span>
+				</li>
+				<li>
+					<img class="bx" src="image/BX.png">
+					<span class="text">
+						<h3>2834</h3>
+						<p>Boxes</p>
+					</span>
+				</li>
+				<li>
+					
+				 <img class="bx" src="image/sal.png">
+					
+					<span class="text">
+						<h3>$2543</h3>
+						<p>Total Sales</p>
+						<h5 style="color: green; ">+2.9%</h5>
+					</span>
+				</li>
+                <li>
+					<img class="bx" src="image/cncll.png">
+					<span class="text">
+						<h3>543</h3>
+						<p>Total Canceled</p>
+						<h5 style="color: red; ">+0.2%</h5>
+					</span>
+				</li>
+                
+			</ul><div class="table-data bacgroundd">
+				<div class="order bacgroundd ">
+					<div class="head ">
+						<h3>Recent Orders</h3>
+						<i class='bx bx-search' ></i>
+						<i class='bx bx-filter' ></i>
+					</div>
+					<table>
+						<thead >
+							<tr>
+								
+								<th style="text-align: center;">User</th>
+								<th style="text-align: center;">Date Order</th>
+								<th style="text-align: center;">Status</th>
+								<th style="text-align: center;">Price</th>
+								<th style="text-align: center;">Update</th>
+								
+								
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>
+									<img src="image/cus1.jpg">
+									<p>John Doe</p>
+								</td>
+								<td style="text-align: center;">01-10-2021</td>
+								<td style="text-align: center;"><span class="status completed">Completed</span>
+									</td>
+									<td style="text-align: center;">$25.43</td>
+									<td style="text-align: center;"><span class="status" style="background-color: RED;cursor: pointer; ">Rufese</span>
+										<span class="status" style="background-color: green ;cursor: pointer;">Accept</span>
+										<span class="status" style="background-color: #FD7238;cursor: pointer;"><a href ="deteilOrder.html" style="color:white;">Detail</a></span>
+									</td>
+							</tr>
+							<tr>
+								<td>
+									<img src="image/cus2.jpg">
+									<p>John Doe</p>
+								</td>
+								<td style="text-align: center;">01-10-2021</td>
+								<td style="text-align: center;"><span class="status pending">Pending  </span></td>
+								<td style="text-align: center;">$10.43</td>
+								<td style="text-align: center;"><span class="status" style="background-color: red; cursor: pointer;">Rufese</span>
+									<span class="status" style="background-color: green;cursor: pointer; ">Accept</span>
+									<span class="status" style="background-color: #FD7238;cursor: pointer;"><a href ="deteilOrder.html" style="color:white;">Detail</a></span>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<img src="image/cus3.jpg">
+									<p>John Doe</p>
+								</td>
+								<td style="text-align: center;">01-10-2021</td>
+								<td style="text-align: center;"><span class="status process">Process  </span></td>
+								<td style="text-align: center;">$9.27</td>
+								<td style="text-align: center;"><span class="status" style="background-color: red;cursor: pointer; ">Rufese</span>
+									<span class="status" style="background-color: green ;cursor: pointer;">Accept</span>
+									<span class="status" style="background-color: #FD7238;cursor: pointer;"><a href ="deteilOrder.html" style="color:white;">Detail</a></span>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<img src="image/cus1.jpg">
+									<p>John Doe</p>
+								</td>
+								<td style="text-align: center;">01-10-2021</td>
+								<td style="text-align: center;"><span class="status pending">Pending  </span></td>
+								<td style="text-align: center;">$25.43</td>
+								<td style="text-align: center;"><span class="status" style="background-color: red;cursor: pointer; ">Rufese</span>
+									<span class="status" style="background-color: green ;cursor: pointer;">Accept</span>
+									<span class="status" style="background-color: #FD7238;cursor: pointer;"><a href ="deteilOrder.html" style="color:white;">Detail</a></span>
+								</td>
+							</tr>
+							<tr>
+								<td style="text-align: center;">
+									<img src="image/cus2.jpg">
+									<p>John Doe</p>
+								</td>
+								<td style="text-align: center;">01-10-2021</td>
+								<td style="text-align: center;"><span class="status completed">Completed</span></td>
+								<td style="text-align: center;">$25.43</td>
+								<td style="text-align: center;"><span class="status" style="background-color: red; cursor: pointer;">Rufese</span>
+									<span class="status" style="background-color: green;cursor: pointer; ">Accept</span>
+									<span class="status" style="background-color:#FD7238;cursor: pointer;"><a href ="deteilOrder.html" style="color:white;">Detail</a></span>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+
+					
+				</div>
+				</div>
+            <div class="rightr">
+                <div class="topr">
+                    <div class="recent-updates">
+                        <h2>Recent Updates</h2>
+                        <div class="updates">
+                            <div class="update">
+                                <div class="profile-photo">
+                                    <img src="image/cus1.jpg" alt="">
+                                </div>
+                                <div class="message">
+                                    <p><b>Mike Tyson</b> received his order of night lion trch GPS drone.</p>
+                                    <small class="text-muted">2 Minutes Ago</small>
+                                </div>
+                            </div>
+                            <div class="update">
+                                <div class="profile-photo">
+                                    <img src="image/cus2.jpg" alt="">
+                                </div>
+                                <div class="message">
+                                    <p><b>Mike Tyson</b> received his order of night lion trch GPS drone.</p>
+                                    <small class="text-muted">2 Minutes Ago</small>
+                                </div>
+                            </div>
+                            <div class="update">
+                                <div class="profile-photo">
+                                    <img src="image/cus3.jpg" alt="">
+                                </div>
+                                <div class="message">
+                                    <p><b>Mike Tyson</b> received his order of night lion trch GPS drone.</p>
+                                    <small class="text-muted">2 Minutes Ago</small>
+                                </div>
+                            </div>
+                            <div class="update">
+                                <div class="profile-photo">
+                                    <img src="image/use3.png" alt="">
+                                </div>
+                                <div class="message">
+                                    <p><b>Mike Tyson</b> received his order of night lion trch GPS drone.</p>
+                                    <small class="text-muted">2 Minutes Ago</small>
+                                </div>
+                            </div>
+                       
+                            
+                        </div>
+                    </div>
+                    <!-- Sales analytices -->
+                    
+                    <div class="sales-analytices">
+                        <h2>Box Analytices</h2>
+                        <div class="item online">
+                            <div class="icons">
+                                <span class="material-symbols-outlined">
+                                multicooker
+                                </span>
+                            </div>
+                            <div class="rightr">
+                                <div class="info">
+                                    <h3>
+                                        NUMBER BOXES ONLINE
+                                    </h3>
+                                    <small class="text-muted">Last 24 Hours</small>
+                                </div>
+                                <!-- <h5 class="success">+39%</h5> -->
+                                <h3 class="nbr">10</h3>
+                            </div>
+                        </div>
+                        <div class="item customers">
+                            <div class="icons">
+                                <span class="material-symbols-outlined">
+                                shopping_cart
+                                </span>
+                            </div>
+                            <div class="rightr">
+                                <div class="info">
+                                    <h3>
+                                        NUMBER BOXES VENDUER
+                                    </h3>
+                                    <small class="text-muted">Last 24 Hours</small>
+                                </div>
+                                <!-- <h5 class="success">+39%</h5> -->
+                                <h3 class="nbr">5</h3>
+                            </div>
+                        </div>
+                        <div class="item offline">
+                            <div class="icons">
+                                <span class="material-symbols-outlined">
+                                    remove_shopping_cart
+                                    </span>
+                            </div>
+                            <div class="rightr">
+                                <div class="info">
+                                    <h3>
+                                        NUMBER BOXES RESTER
+                                    </h3>
+                                    <small class="text-muted">Last 24 Hours</small>
+                                </div>
+                                <!-- <h5 class="danger">+39%</h5> -->
+                                <h3 class="nbr">5</h3>
+                            </div>
+                        </div>
+                        <a href="paquetVendeur.html">
+                            <div class="item add-product">
+                            <div>
+                                <span class="material-symbols-outlined">
+                                    add
+                                    </span>
+										<h3>Add Boxe</a></h3>
+									
+                                    
+                            </div> </div>
+                        </a>
+                        
+                       
+
+                    </div>
+                    <div class="sales-analytices">
+                        <h2>Statut de la Vente</h2>
+                        <div class="item ">
+                            <div class="icons">
+                                <span class="material-symbols-outlined">
+                                    schedule
+                                    </span>
+                            </div>
+                            <div class="rightr">
+                                <div class="info">
+                                    <h3>
+                                        Fin de La Vente
+                                    </h3>
+                                    <small class="text-muted"><h3 class="datevente"><b>Aujourd'hui </b> 19:00</h3>Heure de reservation de panier</small>
+                                </div>
+                                <!-- <h5 class="success">+39%</h5> -->
+                                <!-- <h3 class="datevente"><b>Aujourd'hui</b> 19:00</h3> -->
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="icons">
+                                <span class="material-symbols-outlined">
+                                    check_box
+                                    </span>
+                            </div>
+                            <div class="rightr">
+                                <div class="info">
+                                    <h3>
+                                        Heure de collecte
+                                    </h3>
+                                    <small class="text-muted"><h3 class="datevente"><b>En cours  </b> 18:45-19:00</h3>Heure de recuperer les panier resever</small>
+                                </div>
+                                <!-- <h5 class="danger">+39%</h5> -->
+                                <!-- <h3 class="datevente"><b>En cours</b>18:45-19:00</h3> -->
+                            </div>
+                        </div>
+                        <div class="item add-product">
+                            <div>
+                                <span class="material-symbols-outlined">
+                                    edit
+                                    </span>
+                                    <h3>Modifer</h3>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+			
+			
+			
+<!-- Commantaires -->
+	<div class="cmnt">
+
+					<div class="swiper mySwiper container">
+					  <div class="swiper-wrapper content">
+				
+						<div class="swiper-slide card">
+						  <div class="card-content">
+							<div class="image">
+							  <img src="image/cus3.jpg" alt="">
+							</div>
+				
+							<div class="media-icons">
+							  <!-- <i class="fab fa-facebook"></i>
+							  <i class="fab fa-twitter"></i>
+							  <i class="fab fa-github"></i> -->
+							</div>
+				
+							<div class="name-profession">
+							  <span class="name">Ally Pearson</span>
+							  <span class="profession">Costumer</span>
+							</div>
+				
+							<div class="rating">
+							  <i class="fas fa-star"></i>
+							  <i class="fas fa-star"></i>
+							  <i class="fas fa-star"></i>
+							  <i class="far fa-star"></i>
+							  <i class="far fa-star"></i>
+							</div>
+							<div class="button">
+								<button class="aboutMe">Deteil Commande</button>
+							  </div>
+						  </div>
+						</div>
+						<div class="swiper-slide card">
+						  <div class="card-content">
+							<div class="image">
+							  <img src="image/cus2.jpg" alt="">
+							</div>
+				
+							<div class="media-icons">
+							  <!-- <i class="fab fa-facebook"></i>
+							  <i class="fab fa-twitter"></i>
+							  <i class="fab fa-github"></i> -->
+							</div>
+							<div class="name-profession">
+								<span class="name">Ally Pearson</span>
+								<span class="profession">Costumer</span>
+							  </div>
+				
+							<div class="rating">
+							  <i class="fas fa-star"></i>
+							  <i class="fas fa-star"></i>
+							  <i class="fas fa-star"></i>
+							  <i class="fas fa-star"></i>
+							  <i class="fas fa-star"></i>
+							</div>
+				
+							<div class="button">
+								<button class="aboutMe">Deteil Commande</button>
+							  </div>
+						  </div>
+						</div>
+						<div class="swiper-slide card">
+						  <div class="card-content">
+							<div class="image">
+							  <img src="image/cus1.jpg" alt="">
+							</div>
+				
+							<div class="media-icons">
+							  <!-- <i class="fab fa-facebook"></i>
+							  <i class="fab fa-twitter"></i>
+							  <i class="fab fa-github"></i> -->
+							</div>
+				
+							<div class="name-profession">
+								<span class="name">Ally Pearson</span>
+								<span class="profession">Costumer</span>
+							  </div>
+				
+							<div class="rating">
+							  <i class="fas fa-star"></i>
+							  <i class="fas fa-star"></i>
+							  <i class="fas fa-star"></i>
+							  <i class="fas fa-star"></i>
+							  <i class="far fa-star"></i>
+							</div>
+				
+							<div class="button">
+								<button class="aboutMe">Deteil Commande</button>
+							  </div>
+						  </div>
+						</div>
+						<div class="swiper-slide card">
+						  <div class="card-content">
+							<div class="image">
+							  <img src="image/cus3.jpg" alt="">
+							</div>
+				
+							<div class="media-icons">
+							  <!-- <i class="fab fa-facebook"></i>
+							  <i class="fab fa-twitter"></i>
+							  <i class="fab fa-github"></i> -->
+							</div>
+				
+							<div class="name-profession">
+								<span class="name">Ally Pearson</span>
+								<span class="profession">Costumer</span>
+							  </div>
+				
+							<div class="rating">
+							  <i class="fas fa-star"></i>
+							  <i class="fas fa-star"></i>
+							  <i class="fas fa-star"></i>
+							  <i class="fas fa-star"></i>
+							  <i class="far fa-star"></i>
+							</div>
+				
+							<div class="button">
+								<button class="aboutMe">Deteil Commande</button>
+							  </div>
+						  </div>
+						</div>
+						<div class="swiper-slide card">
+						  <div class="card-content">
+							<div class="image">
+							  <img src="image/cus2.jpg" alt="">
+							</div>
+				
+							<div class="media-icons">
+							  <!-- <i class="fab fa-facebook"></i>
+							  <i class="fab fa-twitter"></i>
+							  <i class="fab fa-github"></i> -->
+							</div>
+				
+							<div class="name-profession">
+								<span class="name">Ally Pearson</span>
+								<span class="profession">Costumer</span>
+							  </div>
+				
+							<div class="rating">
+							  <i class="fas fa-star"></i>
+							  <i class="fas fa-star"></i>
+							  <i class="fas fa-star"></i>
+							  <i class="fas fa-star"></i>
+							  <i class="far fa-star"></i>
+							</div>
+				
+							<div class="button">
+								<button class="aboutMe">Deteil Commande</button>
+							  </div>
+						  </div>
+						</div>
+						<div class="swiper-slide card">
+						  <div class="card-content">
+							<div class="image">
+							  <img src="image/cus1.jpg" alt="">
+							</div>
+				
+							<div class="media-icons">
+							  <!-- <i class="fab fa-facebook"></i>
+							  <i class="fab fa-twitter"></i>
+							  <i class="fab fa-github"></i> -->
+							</div>
+				
+							<div class="name-profession">
+							  <span class="name">Caroline Parker</span>
+							  <span class="profession">Systems Analyst</span>
+							</div>
+				
+							<div class="rating">
+							  <i class="fas fa-star"></i>
+							  <i class="fas fa-star"></i>
+							  <i class="fas fa-star"></i>
+							  <i class="fas fa-star"></i>
+							  <i class="fas fa-star"></i>
+							</div>
+				
+							<div class="button">
+								<button class="aboutMe">Deteil Commande</button>
+							  </div>
+						  </div>
+						</div>
+						<div class="swiper-slide card">
+						  <div class="card-content">
+							<div class="image">
+							  <img src="image/cus3.jpg" alt="">
+							</div>
+				
+							<div class="media-icons">
+							  <!-- <i class="fab fa-facebook"></i>
+							  <i class="fab fa-twitter"></i>
+							  <i class="fab fa-github"></i> -->
+							</div>
+				
+							<div class="name-profession">
+								<span class="name">Ally Pearson</span>
+								<span class="profession">Costumer</span>
+							  </div>
+				
+							<div class="rating">
+							  <i class="fas fa-star"></i>
+							  <i class="fas fa-star"></i>
+							  <i class="fas fa-star"></i>
+							  <i class="far fa-star"></i>
+							  <i class="far fa-star"></i>
+							</div>
+				
+							<div class="button">
+								<button class="aboutMe">Deteil Commande</button>
+							  </div>
+						  </div>
+						</div>
+						<div class="swiper-slide card">
+						  <div class="card-content">
+							<div class="image">
+							  <img src="image/cus2.jpg" alt="">
+							</div>
+				
+							<div class="media-icons">
+							  <!-- <i class="fab fa-facebook"></i>
+							  <i class="fab fa-twitter"></i>
+							  <i class="fab fa-github"></i> -->
+							</div>
+				
+							<div class="name-profession">
+								<span class="name">Ally Pearson</span>
+								<span class="profession">Costumer</span>
+							  </div>
+							<div class="rating">
+							  <i class="fas fa-star"></i>
+							  <i class="fas fa-star"></i>
+							  <i class="fas fa-star"></i>
+							  <i class="fas fa-star"></i>
+							  <i class="far fa-star"></i>
+							</div>
+				
+							<div class="button">
+								<button class="aboutMe">Deteil Commande</button>
+							  </div>
+						  </div>
+						</div>
+						<div class="swiper-slide card">
+						  <div class="card-content">
+							<div class="image">
+							  <img src="image/cus1.jpg" alt="">
+							</div>
+				
+							<div class="media-icons">
+							  <!-- <i class="fab fa-facebook"></i>
+							  <i class="fab fa-twitter"></i>
+							  <i class="fab fa-github"></i> -->
+							</div>
+				
+							<div class="name-profession">
+								<span class="name">Ally Pearson</span>
+								<span class="profession">Costumer</span>
+							  </div>
+				
+							<div class="rating">
+							  <i class="fas fa-star"></i>
+							  <i class="fas fa-star"></i>
+							  <i class="fas fa-star"></i>
+							  <i class="far fa-star"></i>
+							  <i class="far fa-star"></i>
+							</div>
+				
+							<div class="button">
+							  <button class="aboutMe">Deteil Commande</button>
+							</div>
+						  </div>
+						</div>
+				
+					  </div>
+					</div>
+				
+					<div class="swiper-button-next"></div>
+					  <div class="swiper-button-prev"></div>
+					  <div class="swiper-pagination"></div>
+					</div>
+				
+				  <!-- Swiper JS -->
+				  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+				</div>
+		</main>
+		<!-- MAIN -->
+	<!-- CONTENT -->
+
+	<!-- Heure -->
+	<script src="clock.js"></script>
+	<!-- daschbord -->
+    <script src="dashboardVendeur.js"></script>
+	<!-- cmnt section -->
+	<script src="dashboardComantaire.js"></script>
+
+	</body>
+</html>
