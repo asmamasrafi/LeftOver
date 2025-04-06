@@ -1,0 +1,169 @@
+
+    /* === Google Font Import - Poppins === */
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+    .cmnt{
+     box-sizing: border-box;
+      height: 100vh;
+      align-items: center;
+      justify-content: center;
+      background: url(image/bac5.jpg) ; 
+      /* background:  #114D4D; */
+      position: relative;  
+      height: 340px;
+      width: 100%;
+      align-items: center;
+      margin-top: 30px;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.288);
+      border-radius: 20px;
+    }
+    
+    .cmnt:hover{
+      box-shadow: none;
+    }
+    .swiper{
+      width: 900px;
+    }
+    
+    .card{
+      position: relative;
+      background: rgb(238, 236, 236);
+      border-radius: 20px;
+      height: 300px;
+      margin: 20px 0;
+      box-shadow: 0 5px 10px rgba(12, 10, 10, 0.288);
+    }
+    .card:hover{
+      box-shadow: none;
+    }
+    .card::before{
+      content: "";
+      position: absolute;
+      height: 40%;
+      width: 100%;
+      background: rgb(238, 236, 236);
+      border-radius: 20px 20px 0 0;
+    }
+    
+    .card .card-content{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 30px;
+      position: relative;
+      z-index: 100;
+    }
+    
+    section .card .image{
+      height: 100px;
+      width: 100px;
+      border-radius: 20%;
+      padding: 3px;
+      background: #114D4D;
+      margin-top: 0px;
+    }
+    
+    section .card .image img{
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      border-radius: 20%;
+      border: 3px solid #fff;
+    }
+    
+    .card .media-icons{
+      position: absolute;
+      top: 12px;
+      right: 95px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+    
+    .card .media-icons i{
+      color: #114D4D;
+      opacity: 0.6;
+      margin-top: 10px;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      margin: 10px;
+    }
+    
+    .card .media-icons i:hover{
+      opacity: 1;
+    }
+    
+    .card .name-profession{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 10px;
+      color: black;
+    } 
+    
+    .name-profession .name{
+      font-size: 15px;
+      font-weight: 600;
+    }
+    
+    .name-profession .profession{
+      font-size:10px;
+      font-weight: 500;
+    }
+    
+    .card .rating{
+      display: flex;
+      align-items: center;
+      margin-top: 20px;
+    }
+    
+    .card .rating i{
+      font-size: 18px;
+      margin: 0 2px;
+      color: #114D4D;
+    }
+    
+    .card .button{
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      margin-top: 25px;
+    }
+    
+    .card .button button{
+      background: #114D4D;
+      outline: none;
+      border: none;
+      color: #fff;
+      padding: 8px 22px;
+      border-radius: 10px;
+      font-size: 12px;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+    
+    .button button:hover{
+      background: #dfa961;
+    }
+    
+    .swiper-pagination{
+      position: absolute;
+      top: 450px;
+    }
+    
+    .swiper-pagination-bullet{
+      height: 7px;
+      width: 26px;
+      border-radius: 25px;
+      background: #114D4D;
+    }
+    
+    .swiper-button-next, .swiper-button-prev{
+      opacity: 0.7;
+      color: #fff;
+      transition: all 0.3s ease;
+    }
+    .swiper-button-next:hover, .swiper-button-prev:hover{
+      opacity: 1;
+      color: #3e6868
+    }

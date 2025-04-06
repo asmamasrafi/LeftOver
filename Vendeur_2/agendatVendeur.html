@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Boxicons -->
+	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+	<!-- My CSS -->
+	<link rel="stylesheet" href="dashboardVendeur.css">
+    <link rel="stylesheet" href="agendatVendeur.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<!-- Charts -->
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+
+    <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+    <script
+  src="https://code.jquery.com/jquery-3.6.3.js" ></script>
+<script>
+    $(document).ready(function(){
+        $(".profile .icon_wrap").click(function(){
+            $(this).parent().toggleClass("active");
+			$(".switch-mode").removeClass("active");
+            $(".notifications").removeClass("active");
+        });
+        $(".notifications .icon_wrap").click(function(){
+            $(this).parent().toggleClass("active");
+            $(".profile").removeClass("active");
+        });
+        $(".link").click(function(){
+            $(".notifications").removeClass("active");
+			$(".switch-mode").removeClass("active");
+            $(".popup").addClass("active");
+			
+        });
+        $(".close").click(function(){
+            $(".popup").removeClass("active");
+			
+			$(".switch-mode").removeClass("active");
+           
+        });
+
+    
+    });
+</script>
+	<title>AdminHub</title>
+</head>
+<body>
+
+
+	<!-- SIDEBAR -->
+	<section id="sidebar">
+		<a href="#" class="brand">
+			<i class='bx bxs-smile'></i>
+			<span class="text logo">LeftOver<span class="span">.</span></span>
+		</a>
+		<ul class="side-menu top">
+			<li>
+				<a href="dashboardVendeur.html">
+					<i class='bx bxs-dashboard' ></i>
+					<span class="text">Dashboard</span>
+				</a>
+			</li>
+			<li  class="active">
+				<a href="#">
+					<i class='bx bx bxs-calendar'></i>
+					<span class="text">Calandrier
+					</span>
+				</a>
+			</li>
+            <li>
+				<a href="paquetVendeur.html">
+					<i class='bx bxs-shopping-bag-alt' ></i>
+					<span class="text">Paquets</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<i class='bx bxs-doughnut-chart' ></i>
+					<span class="text">Analytics</span>
+				</a>
+			</li>
+		</ul>
+		<ul class="side-menu">
+			<li>
+				<a href="#">
+					<i class='bx bxs-cog' ></i>
+					<span class="text">Settings</span>
+				</a>
+			</li>
+			<li>
+				<a href="#" class="logout">
+					<i class='bx bxs-log-out-circle' ></i>
+					<span class="text">Logout</span>
+				</a>
+			</li>
+		</ul>
+	</section>
+	<!-- SIDEBAR -->
+
+
+
+	<!-- CONTENT -->
+	<section id="content">
+		<!-- NAVBAR -->
+		<nav>
+			<i class='bx bx-menu' ></i>
+			<a href="#" class="nav-link">Categories</a>
+			<form action="#">
+				<div class="form-input">
+					<input type="search" placeholder="Search...">
+					<button type="submit" class="search-btn"><i class='bx bx-search' ></i></button>
+				</div>
+			</form>
+			<input type="checkbox" id="switch-mode" hidden>
+			<label for="switch-mode" class="switch-mode active"></label>
+			<div class="navbar_right">
+				<div class="notifications ">
+		   <div class="icon_wrap">
+		 <i class="fa fa-bell"></i>
+		   </div>
+				</div>
+				<div class="profile">
+				 <div class="icon_wrap">
+					 <img src="image/cus2.jpg" alt="">
+					 <span class="name">Saida Be</span>
+					 <i class="fas fa-chevron-down"></i>
+				 </div>
+				 <div class="profile_dd">
+					 <ul class="profile_ul">
+						 <li class="profile_li">
+							 <a class="profile" href="vendeurProfil.html">
+								 <span class="picon">
+									 <i class="fas fa-user-alt" aria-hidden="true"></i>
+								 </span>
+								 Profile
+							 </a>
+							 <div class="btn">My Account</div>
+						 </li>
+						
+					 </ul>
+				 </div>
+				</div>
+			 </div>
+		 </div>
+		
+		</nav>
+		<!-- NAVBAR -->
+
+		<!-- MAIN -->
+		<main >
+
+			<div class="head-title">
+				<div class="left">
+					<h1>Calandrier</h1>
+					<ul class="breadcrumb">
+						<li>
+							<a href="#">Calandrier</a>
+						</li>
+						<li><i class='bx bx-chevron-right' ></i></li>
+						<li>
+							<a class="active" href="#">Home</a>
+						</li>
+					</ul>
+				</div>
+				<a href="#" class="btn-download">
+					<i class='clock' ></i>
+					<span class="display"></span>
+					<!-- <div class="">
+						<div class="">
+						</div>
+					</div> -->
+				</a>
+			</div>
+
+            <div class="container">
+                <div class="left">
+                  <div class="calendar">
+                    <div class="month">
+                      <i class="fas fa-angle-left prev"></i>
+                      <div class="date"></div>
+                      <i class="fas fa-angle-right next"></i>
+                    </div>
+                    <div class="weekdays">
+                      <div>Sun</div>
+                      <div>Mon</div>
+                      <div>Tue</div>
+                      <div>Wed</div>
+                      <div>Thu</div>
+                      <div>Fri</div>
+                      <div>Sat</div>
+                    </div>
+                    <div class="days">
+                        
+                    </div>
+                    <div class="goto-today">
+                      <div class="goto">
+                        <input type="text" placeholder="mm/yyyy" class="date-input" />
+                        <button class="goto-btn">Go</button>
+                      </div>
+                      <button class="today-btn">Today</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="right">
+                    <div class="today-date">
+                        <div class="event-day">
+                            Sun
+                        </div>
+                        <div class="event-date">
+                            19 Fabruary 2023
+                        </div>
+                    </div>
+                    <div class="events">
+                      
+                    </div>
+                    <div class="add-event-wrapper active">
+                        <div class="add-event-header">
+                            <div class="title">Add Event</div>
+                            <i class="fas fa-times close"></i>
+                        </div>
+                        <div class="add-event-body">
+                            <div class="add-event-input">
+                               <input type="text" placeholder="Event Name" class="event-name"> 
+                            </div>
+                            <div class="add-event-input">
+                                <input type="text" placeholder="Event Time From" class="event-time-from"> 
+                             </div>
+                             <div class="add-event-input">
+                                <input type="text" placeholder="Event Time To" class="event-time-to"> 
+                             </div>
+                        </div>
+                        <div class="add-event-footer">
+                            <button class="add-event-btn">Add Event</button>
+                        </div>
+                    </div>
+                   
+                </div> 
+                <button class="add-event">
+                        <i class="fas fa-plus"></i>
+                    </button>
+             </div>
+		</main>
+		<!-- MAIN -->
+	</section>
+
+
+	<!-- CONTENT -->
+	<!-- Heure -->
+	<script src="clock.js"></script>
+	<!-- daschbord -->
+    <script src="dashboardVendeur.js"></script>
+	<!-- Calandrier -->
+    <script src="agendatVendeur.js" defer></script>  
+
+</body>
+</html>

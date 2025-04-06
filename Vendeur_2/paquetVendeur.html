@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Boxicons -->
+	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+	<!-- My CSS -->
+	<link rel="stylesheet" href="dashboardVendeur.css">
+	<!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <!-- Fontawesome CDN Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="paquetVendeur.css">
+    <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+    <script
+  src="https://code.jquery.com/jquery-3.6.3.js" ></script>
+<script>
+    $(document).ready(function(){
+        $(".profile .icon_wrap").click(function(){
+            $(this).parent().toggleClass("active");
+			$(".switch-mode").removeClass("active");
+            $(".notifications").removeClass("active");
+        });
+        $(".notifications .icon_wrap").click(function(){
+            $(this).parent().toggleClass("active");
+            $(".profile").removeClass("active");
+        });
+        $(".link").click(function(){
+            $(".notifications").removeClass("active");
+			$(".switch-mode").removeClass("active");
+            $(".popup").addClass("active");
+			
+        });
+        $(".close").click(function(){
+            $(".popup").removeClass("active");
+			
+			$(".switch-mode").removeClass("active");
+           
+        });
+
+    
+    });
+</script>
+	<title>AdminHub</title>
+</head>
+<body>
+
+
+	<!-- SIDEBAR -->
+	<section id="sidebar">
+		<a href="#" class="brand">
+			<i class='bx bxs-smile'></i>
+			<span class="text logo">LeftOver<span class="span">.</span></span>
+		</a>
+		<ul class="side-menu top">
+			<li>
+				<a href="dashboardVendeur.html">
+					<i class='bx bxs-dashboard' ></i>
+					<span class="text">Dashboard</span>
+				</a>
+			</li>
+			<li >
+				<a href="agendatVendeur.html">
+					<i class='bx bx bxs-calendar'></i>
+					<span class="text">Calandrier
+					</span>
+				</a>
+			</li>
+            <li class="active">
+				<a href="#">
+					<i class='bx bxs-shopping-bag-alt' ></i>
+					<span class="text">Paquets</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<i class='bx bxs-doughnut-chart' ></i>
+					<span class="text">Analytics</span>
+				</a>
+			</li>
+		</ul>
+		<ul class="side-menu">
+			<li>
+				<a href="#">
+					<i class='bx bxs-cog' ></i>
+					<span class="text">Settings</span>
+				</a>
+			</li>
+			<li>
+				<a href="#" class="logout">
+					<i class='bx bxs-log-out-circle' ></i>
+					<span class="text">Logout</span>
+				</a>
+			</li>
+		</ul>
+	</section>
+	<!-- SIDEBAR -->
+
+
+
+	<!-- CONTENT -->
+	<section id="content">
+		<!-- NAVBAR -->
+		<nav>
+			<i class='bx bx-menu' ></i>
+			<a href="#" class="nav-link">Categories</a>
+			<form action="#">
+				<div class="form-input">
+					<input type="search" placeholder="Search...">
+					<button type="submit" class="search-btn"><i class='bx bx-search' ></i></button>
+				</div>
+			</form>
+			<input type="checkbox" id="switch-mode" hidden>
+			<label for="switch-mode" class="switch-mode active"></label>
+			<div class="navbar_right">
+				<div class="notifications ">
+		   <div class="icon_wrap">
+		 <i class="fa fa-bell"></i>
+		   </div>
+				</div>
+				<div class="profile">
+				 <div class="icon_wrap">
+					 <img src="image/cus2.jpg" alt="">
+					 <span class="name">Saida Be</span>
+					 <i class="fas fa-chevron-down"></i>
+				 </div>
+				 <div class="profile_dd">
+					 <ul class="profile_ul">
+						 <li class="profile_li">
+							 <a class="profile" href="#">
+								 <span class="picon">
+									 <i class="fas fa-user-alt" aria-hidden="true"></i>
+								 </span>
+								 Profile
+							 </a>
+							 <div class="btn">My Account</div>
+						 </li>
+						
+					 </ul>
+				 </div>
+				</div>
+			 </div>
+		 </div>
+		
+		</nav>
+		<!-- NAVBAR -->
+
+		<!-- MAIN -->
+		<main >
+            <div class="head-title">
+				<div class="left">
+					<h1>Paquets</h1>
+					<ul class="breadcrumb">
+						<li>
+							<a href="#">Paquets</a>
+						</li>
+						<li><i class='bx bx-chevron-right' ></i></li>
+						<li>
+							<a class="active" href="#">Home</a>
+						</li>
+					</ul>
+				</div>
+				<a href="#" class="btn-download">
+					<i class='clock' ></i>
+					
+					<span class="display"></span>
+					<!-- <div class="">
+						<div class="">
+						</div>
+					</div> -->
+				</a>
+			</div>
+      
+		<div class="bac">
+
+			<div class="container">
+				<h1 class="form-title">Ajouter paquet</h1>
+				<form action="#">
+				  <div class="main-user-info">
+					<div class="user-input-box">
+					  <label for="fullName">Paquet Name</label>
+					  <input type="text"
+							  id="fullName"
+							  name="fullName"
+							  placeholder="Enter paquet Name"/>
+					</div>
+					<div class="user-input-box">
+					  <label for="username">Categorie</label>
+					  <!-- <input type="text"
+							  id="username"
+							  name="username"
+							  placeholder="Enter Username"/> -->
+							  <select>
+								<option value="books">Choiser Categorie</option>
+								<option value="cat1">Cat1</option>
+								
+							  </select>
+					</div>
+
+					
+					<div class="user-input-box">
+					  <label for="email">Prix</label>
+					  <input type="number"
+							  id="email"
+							  name="email"
+							  placeholder="Enter prix"/>
+					</div>
+					<!-- <div class="user-input-box">
+						<label for="email">Discount</label>
+						<input type="number"
+								id="email"
+								name="email"
+								placeholder="30%"/>
+					  </div> -->
+					<div class="user-input-box">
+					  <label for="phoneNumber">Quantite</label>
+					  <input type="text"
+							  id="phoneNumber"
+							  name="phoneNumber"
+							  placeholder="Enter Qantite "/>
+					</div>
+					<div class="user-input-box">
+					  <label for="password">Description</label>
+					  <input type="text"
+							  id="password"
+							  name="password"
+							  placeholder="Enter a description pour votre paquet"/>
+					</div>
+					<div class="user-input-box">
+					  <label for="confirmPassword">Discount</label>
+					  <input type="text"
+							  id="confirmPassword"
+							  name="confirmPassword"
+							  placeholder="30%"/>
+					</div>
+				  </div>
+				  <div class="gender-details-box">
+					<span class="gender-title">Statut</span>
+					<div class="gender-category">
+					  <input type="radio" name="gender" id="male">
+					  <label for="male">Publier</label>
+					  <input type="radio" name="gender" id="female">
+					  <label for="female">Draft</label>
+					</div>
+				  </div>
+				  <div class="form-submit-btn">
+					<input type="submit" value="Ajouter">
+				  </div>
+				</form>
+			  </div>
+		</div>	
+<!-- <div class="bac"> -->
+	
+<div class="table-data bacgroundd" >
+		
+			<div class="order bacgroundd " >
+				<div class="head">
+					<h3 class="form-title" style="color:#342E37 ; border-bottom: solid 1px #114D4D ;">Paquets</h3>
+					<i class='bx bx-search' ></i>
+					<i class='bx bx-filter' ></i>
+				</div>
+				<table>
+					<thead >
+						<tr class="title2">
+							<th class="td" style="text-align: center;">ID Paquet</th>
+							<th class="td" style="text-align: center;">Categorie</th>
+							<th class="td" style="text-align: center;">Prix</th>
+							<th class="td" style="text-align: center;">Qantite</th>
+							<th class="td" style="text-align: center;">Description</th>
+							<th class="td" style="text-align: center;">Statut</th>
+							<th class="td" style="text-align: center;">Update</th>
+							
+						</tr>
+					</thead>
+					<tbody>
+				<tr class="td" >
+					<td style="justify-content: center;">1</td>
+					<td class="td">Patessrie</td>
+					<td class="td">30 DH</td>
+					<td class="td">4</td>
+					<td class="td">---</td>
+					<td class="td">Draft</td>
+					<td class="td"><span class="material-symbols-outlined btn " style=" background:green;">
+						edit
+						</span><span class="material-symbols-outlined btn  "style=" background:red;">
+							delete
+							</span></td>
+				</tr>
+				<tr class="td" >
+					<td style="justify-content: center;">2</td>
+					<td class="td">Patessrie</td>
+					<td class="td">30 DH</td>
+					<td class="td">4</td>
+					<td class="td">---</td>
+					<td class="td">Draft</td>
+					<td class="td"><span class="material-symbols-outlined btn " style=" background:green;">
+						edit
+						</span><span class="material-symbols-outlined btn  "style=" background:red;">
+							delete
+							</span></td>
+				</tr>
+				<tr class="td" >
+					<td style="justify-content: center;">2</td>
+					<td class="td">Patessrie</td>
+					<td class="td">30 DH</td>
+					<td class="td">4</td>
+					<td class="td">---</td>
+					<td class="td">Draft</td>
+					<td class="td"><span class="material-symbols-outlined btn " style=" background:green;">
+						edit
+						</span><span class="material-symbols-outlined btn  "style=" background:red;">
+							delete
+							</span></td>
+				</tr>
+				<tr class="td" >
+					<td style="justify-content: center;">2</td>
+					<td class="td">Patessrie</td>
+					<td class="td">30 DH</td>
+					<td class="td">4</td>
+					<td class="td">---</td>
+					<td class="td">Draft</td>
+					<td class="td"><span class="material-symbols-outlined btn " style=" background:green;">
+						edit
+						</span><span class="material-symbols-outlined btn  "style=" background:red;">
+							delete
+							</span></td>
+				</tr>
+					</tbody>
+				</table>
+			</div>
+			</div>
+</div>
+	
+			
+		</main>
+		<!-- MAIN -->
+	</section>
+
+
+	<!-- CONTENT -->
+	<!-- Heure -->
+	<script src="clock.js"></script>
+	<!-- daschbord -->
+    <script src="paquetVendeur.js"></script>
+
+
+</body>
+</html>
