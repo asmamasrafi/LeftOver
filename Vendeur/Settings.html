@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Boxicons -->
+	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+	<!-- My CSS -->
+	<link rel="stylesheet" href="Settings.css">
+
+	<!-- lien du image-->
+	
+    <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+    <script
+  src="https://code.jquery.com/jquery-3.6.3.js" ></script>
+<script>
+    $(document).ready(function(){
+        $(".profile .icon_wrap").click(function(){
+            $(this).parent().toggleClass("active");
+			$(".switch-mode").removeClass("active");
+            $(".notifications").removeClass("active");
+        });
+        $(".notifications .icon_wrap").click(function(){
+            $(this).parent().toggleClass("active");
+            $(".profile").removeClass("active");
+        });
+        $(".link").click(function(){
+            $(".notifications").removeClass("active");
+			$(".switch-mode").removeClass("active");
+            $(".popup").addClass("active");
+			
+        });
+        $(".close").click(function(){
+            $(".popup").removeClass("active");
+			
+			$(".switch-mode").removeClass("active");
+           
+        });
+
+    
+    });
+</script>
+	<title>AdminHub</title>
+</head>
+<body>
+
+
+	<!-- SIDEBAR -->
+	<section id="sidebar">
+		<a href="#" class="brand">
+			<i class='bx bxs-smile'></i>
+			<span class="text logo">LefOver<span class="span">.</span></span>
+		</a>
+		<ul class="side-menu top">
+			<li class="active">
+				<a href="#">
+					<i class='bx bxs-dashboard' ></i>
+					<span class="text">Dashboard</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<i class='bx bxs-shopping-bag-alt' ></i>
+					<span class="text">My Store</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<i class='bx bxs-doughnut-chart' ></i>
+					<span class="text">Analytics</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<i class='bx bxs-message-dots' ></i>
+					<span class="text">Message</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<i class='bx bxs-group' ></i>
+					<span class="text">Team</span>
+				</a>
+			</li>
+		</ul>
+		<ul class="side-menu">
+			<li>
+				<a href="#">
+					<i class='bx bxs-cog' ></i>
+					<span class="text">Settings</span>
+				</a>
+			</li>
+			<li>
+				<a href="#" class="logout">
+					<i class='bx bxs-log-out-circle' ></i>
+					<span class="text">Logout</span>
+				</a>
+			</li>
+		</ul>
+	</section>
+	<!-- SIDEBAR -->
+
+
+
+	<!-- CONTENT -->
+	<section id="content">
+		<!-- NAVBAR -->
+		<nav>
+			<i class='bx bx-menu' ></i>
+			<a href="#" class="nav-link">Categories</a>
+			<form action="#">
+				<div class="form-input">
+					<input type="search" placeholder="Search...">
+					<button type="submit" class="search-btn"><i class='bx bx-search' ></i></button>
+				</div>
+			</form>
+			<input type="checkbox" id="switch-mode" hidden>
+			<label for="switch-mode" class="switch-mode active"></label>
+			<div class="navbar_right">
+				<div class="notifications ">
+		   <div class="icon_wrap">
+		 <i class="fa fa-bell"></i>
+		   </div>
+		   
+	 
+				</div>
+				<div class="profile">
+				 <div class="icon_wrap">
+					 <img src="images2.jpg" alt="">
+					 <span class="name">Said Be</span>
+					 <i class="fas fa-chevron-down"></i>
+				 </div>
+				 <div class="profile_dd">
+					 <ul class="profile_ul">
+						 <li class="profile_li">
+							 <a class="profile" href="#">
+								 <span class="picon">
+									 <i class="fas fa-user-alt" aria-hidden="true"></i>
+								 </span>
+								 Profile
+							 </a>
+							 <div class="btn">My Account</div>
+						 </li>
+						 <li>
+							 <a class="address" href="#">
+								 <span class="picon">
+									 <i class="fas fa-map-marker" aria-hidden="true"></i>
+								 </span>
+							 Adress        
+							 </a>
+						 </li>
+						 <li>
+							 <a class="settings" href="#">
+								 <span class="picon">
+									 <i class="fas fa-cog" aria-hidden="true"></i>
+								 </span>
+							 Settings       
+							 </a>
+						 </li>
+						 <li>
+							 <a class="logout" href="#">
+								 <span class="picon">
+									 <i class="fas fa-sign-out-alt" aria-hidden="true"></i>
+								
+								 </span>
+							 Logout     
+							 </a>
+						 </li>
+					 </ul>
+				 </div>
+				</div>
+			 </div>
+		 </div>
+		
+		</nav>
+		<!-- NAVBAR -->
+
+		<!-- MAIN -->
+		<main>
+			<div class="card-body">
+				<form>
+				  <h6 class="heading-small  mb-4">Information Generale</h6>
+				  <div class="pl-lg-4">
+					<div class="row">
+					  <div class="col-lg-6">
+						<div class="form-group focused">
+						  <label class="form-control-label" for="input-username">Nom du propriétaire</label>
+						  <input type="text" id="input-username" class="form-control form-control-alternative" placeholder="Username" value=" Ahmed aalami">
+						</div>
+					  </div>
+					  <div class="col-lg-6">
+						<div class="form-group">
+						  <label class="form-control-label" for="input-email"> Adresse E-mail</label>
+						  <input type="email" id="input-email" class="form-control form-control-alternative" placeholder="ahmed@example.com">
+						</div>
+					  </div>
+					</div>
+					
+				  </div>
+				  <hr class="my-4">
+				  <!-- Address -->
+				  <h6 class="heading-small  mb-4">Information sur localisation</h6>
+				  <div class="pl-lg-4">
+					<div class="row">
+					  <div class="col-md-12">
+						<div class="form-group focused">
+						  <label class="form-control-label" for="input-address">Nom et numéro de rue</label>
+						  <input id="input-address" class="form-control form-control-alternative" placeholder="Adresse du commerce" type="text">
+						</div>
+					  </div>
+					</div>
+					<div class="row">
+					  <div class="col-lg-4">
+						<div class="form-group focused">
+						  <label class="form-control-label" for="input-city">Ville</label>
+						  <input type="text" id="input-city" class="form-control form-control-alternative" placeholder="City" value="Agadir">
+						</div>
+					</div>
+					  <div class="col-lg-4">
+						<div class="form-group">
+						  <label class="form-control-label" for="input-country">Postal code</label>
+						  <input type="text" id="input-postal-code" class="form-control form-control-alternative" placeholder="Postal code">
+						</div>
+					  </div>
+					</div>
+				  </div>
+				  <hr class="my-4">
+				  <!-- Description -->
+				  <h6 class="heading-small  mb-4">Information sur votre commerce</h6>
+				  <div class="pl-lg-4">
+					<div class="form-group focused">
+					  <label>Décrivez vos activités et votre expertise en détail afin que les utilisateurs puissent comprendre vos activités. </label>
+					  <textarea rows="4" class="form-control form-control-alternative" placeholder="quelque mots sur votre commerce..."></textarea>
+					</div>
+				  </div>
+				  <hr class="my-4">
+				  <!-- Images -->
+				  <h6 class="heading-small  mb-4">Visuels du compte</h6>
+				  <label class="form-control-label" for="input-address">Image de fond</label>
+				  <div class="upload-box">
+					<div class="upload-img">
+						<img src="" alt="">
+					</div>
+					<label for="upload-input" class="upload-label">Choisie une image</label>
+					<input type="file"  id="upload-input" accept="images/*">
+				   </div>
+                    <br>
+					<br>
+					<label class="form-control-label" for="input-address">Images du menu</label>
+					<div class="card">
+						
+						<div class="drag-area">
+							<span class="visible">
+								Glisser/déposer l'image ici ou
+								<span class="select" role="button">parcourir vos fichier</span>
+							</span>
+							<span class="on-drop"></span>
+							<input name="file" type="file" class="file" multiple />
+						</div>
+				
+						<!-- IMAGE PREVIEW CONTAINER -->
+						<div class="container"></div>
+					</div>
+				</form>
+				<button class="btn-primary" >
+					<span >Enregistrer les modifications</span>
+				</button>
+			  </div>
+		
+		</main>
+		<!-- MAIN -->
+	</section>
+	<!-- CONTENT -->
+
+	<script src="Settings.js"></script>
+</body>
+</html>
