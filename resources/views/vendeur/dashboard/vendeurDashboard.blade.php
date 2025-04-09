@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+
+    <!-- Box Icons  -->
+    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/line-awesome/1.3.0/line-awesome/css/line-awesome.min.css" rel="stylesheet">
+    <!-- Styles  -->
+    <link rel="shortcut icon" href="assets/img/kxp_fav.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.3.js" ></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+    	<!-- Link Swiper's CSS -->
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="{{ asset('css/vendeur/vendeurDashboard.css') }}">
+</head>
+
+<body>
+    <div class="sidebar close">
+        <!-- ========== Logo ============  -->
+        <a href="#" class="logo-box">
+            <i class='bx bxl-xing'></i>
+            <div class="logo-name">Mister Cook</div>
+        </a>
+
+        <!-- ========== List ============  -->
+        <ul class="sidebar-list">
+            <!-- -------- Non Dropdown List Item ------- -->
+            <li>
+                <div class="title">
+                    <a href="{{ url('/vendeur/dashboard') }}" class="link">
+                        <i class='bx bxs-store-alt'></i>
+                        <span class="name">Dashboard</span>
+                    </a>
+                    <!-- <i class='bx bxs-chevron-down'></i> -->
+                </div>
+                <div class="submenu">
+                    <a href="{{ url('/vendeur/dashboard') }}" class="link submenu-title">Dashboard</a>
+                    <!-- submenu links here  -->
+                </div>
+            </li>
+
+            
+            
+            <!-- -------- Non Dropdown List Item ------- -->
+            <li>
+                <div class="title">
+                    <a href="{{ url('/vendeur/programmation') }}" class="link">
+                        <i class='bx bxs-hourglass-bottom' ></i>
+                        <span class="name">Programmation</span>
+                    </a>
+                    <!-- <i class='bx bxs-chevron-down'></i> -->
+                </div>
+                <div class="submenu">
+                    <a href="{{ url('/vendeur/programmation') }}" class="link submenu-title">Programmation</a>
+                    <!-- submenu links here  -->
+                </div>
+            </li>
+
+            <!-- -------- Dropdown List Item ------- -->
+            <li class="dropdown">
+                <div class="title">
+                    <a href="{{ url('/vendeur/paquet') }}" class="link">
+                        <i class='bx bx-package'></i>
+                        <span class="name">Paquets</span>
+                    </a>
+                </div>
+                <div class="submenu">
+                    <a href="{{ url('/vendeur/paquet') }}" class="link submenu-title">Paquets</a>
+                </div>
+            </li>
+
+            <!-- -------- Non Dropdown List Item ------- -->
+            <li>
+                <div class="title">
+                    <a href="{{ url('/vendeur/analytics') }}" class="link">
+                        <i class='bx bxs-pie-chart-alt-2'></i>
+                        <span class="name">Analytics</span>
+                    </a>
+                    <!-- <i class='bx bxs-chevron-down'></i> -->
+                </div>
+                <div class="submenu">
+                    <a href="{{ url('/vendeur/analytics') }}" class="link submenu-title">Analytics</a>
+                    <!-- submenu links here  -->
+                </div>
+            </li>
+
+            <!-- -------- Non Dropdown List Item ------- -->
+            <li>
+                <div class="title">
+                    <a href="{{ url('/vendeur/profile') }}" class="link">
+                        <i class='bx bx-cog'></i>
+                        <span class="name">Paramètres</span>
+                    </a>
+                    <!-- <i class='bx bxs-chevron-down'></i> -->
+                </div>
+                <div class="submenu">
+                    <a href="{{ url('/vendeur/profile') }}" class="link submenu-title">Paramètres</a>
+                    <!-- submenu links here  -->
+                </div>
+            </li>
+
+            <!-- -------- Non Dropdown List Item ------- -->
+            <li>
+                <div class="title">
+                    <a href="{{ url('/vendeur/signin') }}" class="link">
+                        <i class='bx bxs-door-open'></i>
+                        <span class="name">logout</span>
+                    </a>
+                    <!-- <i class='bx bxs-chevron-down'></i> -->
+                </div>
+                <div class="submenu">
+                    <a href="{{ url('/vendeur/signin') }}" class="link submenu-title">Logout</a>
+                    <!-- submenu links here  -->
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!-- ============= Home Section =============== -->
+    <section class="home" >
+        <div class="toggle-sidebar" >
+          <p>Bienvenue sur votre interface MyStore - vous y êtes presque</p>
+        </div>
+    </section>
+
+    <section class="dashboard" id="dashboard"  >
+        
+      <!-- card -->
+        <div class="card">
+            <div class="icon">
+                <img src="https://img.icons8.com/ios/50/null/open-sign--v1.png"/>
+            </div>
+            <strong>Prêt à vous lancer ?
+            </strong>
+            <div class="card__body">
+                <p>Rendez votre commerce visible sur Leftover et permettez aux utilisateurs<br> de sauver vos invendus</p>
+                <br>
+                <button class="btn">Oui ,nous sommmes prêt</button>
+
+            </div>
+        </div>
+     <!-- card details -->
+     <div class="two" > 
+        <!-- commande -->
+       <div class="tab">
+        <strong >Paniers sauvés
+        </strong>
+        <br><br>
+       <div class="table-container">
+        <table class="table table-striped" >
+            <thead>
+              <tr>
+                <th scope="col" width="5%"><input class="form-check-input" type="checkbox" hidden></th>
+                <th scope="col">Identifiant</th>
+                <th scope="col">Heure de Collection</th>
+                <th scope="col">Quantite</th>
+                <th scope="col">Prix</th>
+                <th scope="col">Statut</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="col" width="5%"><input class="form-check-input" type="checkbox"></th>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+                <td>@mdo</td>
+              </tr>
+              <tr>
+                <th scope="col" width="5%"><input class="form-check-input" type="checkbox"></th>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+                <td>@mdo</td>
+              </tr>
+              <tr>
+                <th scope="col" width="5%"><input class="form-check-input" type="checkbox"></th>
+                <th scope="row">3</th>
+                <td>Larry</td>
+                <td>the Bird</td>
+                <td>@twitter</td>
+                <td>@mdo</td>
+              </tr>
+              <tr>
+                <th scope="col" width="5%"><input class="form-check-input" type="checkbox"></th>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+                <td>@mdo</td>
+              </tr>
+              <tr>
+                <th scope="col" width="5%"><input class="form-check-input" type="checkbox"></th>
+                <th scope="row">3</th>
+                <td>Larry</td>
+                <td>the Bird</td>
+                <td>@twitter</td>
+                <td>@mdo</td>
+              </tr>
+              <tr>
+                <th scope="col" width="5%"><input class="form-check-input" type="checkbox"></th>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+                <td>@mdo</td>
+              </tr>
+              <tr>
+                <th scope="col" width="5%"><input class="form-check-input" type="checkbox"></th>
+                <th scope="row">3</th>
+                <td>Larry</td>
+                <td>the Bird</td>
+                <td>@twitter</td>
+                <td>@mdo</td>
+              </tr>
+              <tr>
+                <th scope="col" width="5%"><input class="form-check-input" type="checkbox"></th>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+                <td>@mdo</td>
+              </tr>
+              <tr>
+                <th scope="col" width="5%"><input class="form-check-input" type="checkbox"></th>
+                <th scope="row">3</th>
+                <td>Larry</td>
+                <td>the Bird</td>
+                <td>@twitter</td>
+                <td>@mdo</td>
+              </tr>
+            </tbody>
+          </table>
+       </div>
+          <div class="checkbtn">
+            <button class="btn">Valider le ramassage</button>
+            <button class="btn-annuler">Annuler la reservation</button>
+          </div>
+       </div>
+     <div class="card2">
+                
+                      <div class="card-header no-border">
+                            <strong>Statut de la vente et de la collecte</strong>
+                    
+                        </div>
+                        <br> <br>
+                        <div class="card-body pt-0">
+                            <div class="widget-49">
+                                <div class="widget-49-title-wrapper">
+                                    <div class="widget-49-date-primary">
+                                        <span class="widget-49-date-day">09</span>
+                                        <span class="widget-49-date-month">apr</span>
+                                    </div>
+                                    <div class="widget-49-meeting-info">
+                                        <span class="widget-49-pro-title">Mini Pain</span>
+                                        <span class="widget-49-meeting-time">ouvert le <span style="color: #464853;
+                                            font-size: .9rem;
+                                            letter-spacing: -.035em;
+                                            background-color: #00e591;">Lundi</span> jusqu'a <span style="color: #464853;font-size: .9rem;letter-spacing: -.035em;background-color: #00e591;"> Vendredi</span></span>
+                                    </div>
+                                </div>
+                                <ol class="widget-49-meeting-points">
+                                    <li class="widget-49-meeting-item"><span>Les utilisateurs peuvent réserver ce panier surprise sur </span></li>
+                                    <li class="widget-49-meeting-item"><span> l'application jusqu'à cet horaire</span></li>
+                                    <li class="widget-49-meeting-item"><span> Heure de collecte  : <span style="color: #464853;font-size: .9rem;letter-spacing: -.035em;background-color: #00e591;">23:49 - 00:04</span> </span></li>
+                                    
+                                </ol>
+                                <br>
+                                <div class="widget-49-meeting-action">
+                                    <a href="#" class="btn">Changer l'Horaire</a>
+                                </div>
+                            </div>
+     </div>
+    </div>
+     
+    </div>
+
+    </section>
+  
+    <!-- Link JS -->
+    <script src="{{ asset('js/vendeur/vendeurDashboard.js') }}"></script>
+</body>
+
+</html>

@@ -1,0 +1,87 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nouveau Mot de passe</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ asset('css/Authentification/ResetPassword.css') }}">
+</head>
+<body>
+    <script>
+      
+function ShowPassword(){
+    var x = document.getElementById("myinput");
+    var y = document.getElementById("hide1");
+    var z = document.getElementById("hide2");
+    if(x.type=='password'){
+        x.type="text";
+        y.style.display="block";
+        z.style.display="none";
+    }else{
+        x.type="password";
+        z.style.display="block";
+        y.style.display="none";
+    }
+}
+
+function ShowPassword2(){
+    var x = document.getElementById("myinput2");
+    var y = document.getElementById("hide3");
+    var z = document.getElementById("hide4");
+    if(x.type=='password'){
+        x.type="text";
+        y.style.display="block";
+        z.style.display="none";
+    }else{
+        x.type="password";
+        z.style.display="block";
+        y.style.display="none";
+    }
+}
+    </script>
+
+
+    <div class="row">
+        <div class="col-md-6 side-image">
+            <div class="text">
+                <h3 style="text-transform: uppercase;">réinitialiser un mot de passe</h3>
+            </div>
+        </div>
+        <div class="col-md-6 right">
+             <div class="input-box">
+                <header>Changer votre  mot de passe</header>
+                <div class="input-field">
+                    <input type="password" class="input" id="myinput"  placeholder="Nouveau mot de passe" required>
+                    <label for="password">Mot de Passe</label>
+                    <span class="eye" onclick="ShowPassword()">
+                        <i class="fa fa-eye" id="hide1" ></i>
+                        <i class="fa fa-eye-slash" id="hide2"></i>
+                    </span>
+                </div>
+                <div class="input-field">
+                    <input type="password" class="input" id="myinput2"  placeholder="Nouveau mot de passe" required>
+                    <label for="password">Confirmation du Mot de Passe</label>
+                    <span class="eye" onclick="ShowPassword2()">
+                        <i class="fa fa-eye" id="hide3" ></i>
+                        <i class="fa fa-eye-slash" id="hide4"></i>
+                        </span>
+                </div>
+                <div class="input-field">
+                    <input type="submit" class="submit" value="Valider les changements">
+                </div>
+                <div class="signin">
+                    <span><a href="{{ url('/vendeur/signin') }}">Se Connecter</a></span>
+                </div>
+             </div>
+        </div>
+    </div>
+
+
+</body>
+</html>
+   
+  
