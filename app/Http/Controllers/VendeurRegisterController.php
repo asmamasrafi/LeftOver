@@ -49,7 +49,7 @@ class VendeurRegisterController extends Controller
 
             return response()->json([
                 'message' => 'Inscription réussie!',
-                'redirect' => route('vendeur.dashboard.vendeurDashboard')
+                'redirect' => url('/vendeur/signin')
             ]);
 
         } catch (\Exception $e) {

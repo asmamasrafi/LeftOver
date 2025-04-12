@@ -265,14 +265,16 @@ function initMultiStepForm() {
 
     nextBtns.forEach(btn => {
         btn.addEventListener("click", () => {
-            collectStepData(currentStep);
-            steps[currentStep].classList.remove("active");
-            currentStep++;
-            steps[currentStep].classList.add("active");
+            if (currentStep < steps.length - 1) {
+                collectStepData(currentStep);
+                steps[currentStep].classList.remove("active");
+                currentStep++;
+                steps[currentStep].classList.add("active");
+            }
         });
     });
 
-    options.forEach(option => {
+    selectOptions.forEach(option => {
         option.addEventListener("click", () => {
             selectedActivity = option.getAttribute("data-value");
             document.getElementById("activity").value = selectedActivity;
@@ -289,7 +291,7 @@ function initMultiStepForm() {
                 break;
 
             case 1:
-                formData.street = document.querySelector('#address').value;
+                formData.street = document.querySelector('#street').value;
                 formData.city = document.querySelector('#city').value;
                 formData.postal_code = document.querySelector('#postal_code').value;
                 formData.password = document.querySelector('#password').value;
@@ -320,30 +322,38 @@ function initMultiStepForm() {
 
             for (let key in formData) {
                 if (key === 'days_open') {
-                    payload.append(key, JSON.stringify(formData[key]));
-                } else if (key === 'photo' && formData.photo) {
+                    formData[key].forEach((day, index) => {
+                        payload.append(`days_open[${index}]`, day);
+                    });
+                }
+                else if (key === 'photo' && formData.photo) {
                     payload.append(key, formData[key]);
                 } else {
                     payload.append(key, formData[key]);
                 }
             }
 
-            const response = await fetch('/vendeur/signup', {
-                method: 'POST',
-                headers: {
-                    'X-CSRF-TOKEN': token
-                },
-                body: payload
-            });
+            const registerRoute = document.querySelector('meta[name="vendeur-register-route"]').getAttribute('content');
+
+            const response = await fetch(registerRoute, {
+                  method: 'POST',
+                  headers: {
+                        'X-CSRF-TOKEN': token
+                                 },
+                   body: payload
+                  });
 
             const result = await response.json();
+            
+            console.log('Résultat Laravel :', result);
 
             if (response.ok) {
-                alert('Inscription réussie !');
-                window.location.href = '/vendeur/dashboard';
+                alert(result.message);
+                window.location.href = result.redirect;
             } else {
                 alert('Erreur: ' + (result.message || 'Veuillez vérifier les champs.'));
             }
+            
         } catch (error) {
             console.error('Erreur :', error);
             alert('Une erreur est survenue.');

@@ -13,11 +13,12 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/habibmhamadi/multi-select-tag/dist/css/multi-select-tag.css">
-
+  <meta name="vendeur-register-route" content="{{ route('vendeur.register') }}">
 </head>
 <body>
 
- <form action="{{ route('vendeur.register') }}" method="POST" enctype="multipart/form-data" data-multi>
+<form id="multisteps" method="POST" enctype="multipart/form-data" data-multi>
+
     @csrf
 
     <!-- ÉTAPE 1 -->
@@ -54,7 +55,7 @@
                         </div>
 
                         <div class="input-field">
-                            <button class="btn-primary" type="button">
+                            <button class="btn-primary" type="button" data-next>
                                 <span data-next>Suivant</span>
                             </button>
                         </div>
@@ -80,8 +81,8 @@
                         <h2 class="logo">Vous êtes presque arrivés<span>.</span></h2>
 
                         <div class="input-field">
-                            <input type="text" name="address" class="input" id="address" required>
-                            <label for="address">Nom et numéro de rue</label>
+                            <input type="text" name="street" class="input" id="street" required>
+                            <label for="street">Nom et numéro de rue</label>
                         </div>
 
                         <div class="input-field">
@@ -107,7 +108,7 @@
                             <button class="btn-secondary" type="button">
                                 <span data-prev>Précédent</span>
                             </button>
-                            <button class="btn-primary" type="button">
+                            <button class="btn-primary" type="button" data-next>
                                 <span data-next>Suivant</span>
                             </button>
                         </div>
@@ -130,11 +131,11 @@
 
                 <div class="cover-hader-site">
                     <label class="headlbl">Importer une photo de votre commerce ! </label>
-                    <img src="images/téléchargement.png">
+                    <img src="{{ asset('images/fideliser-clients-restaurant.png') }}" alt="Votre image">
 
 				   <div class="cover-image-div">
 					<div class="cover-image-edite-btn">
-                                <input type="file" name="image">
+                                <input type="file" name="photo">
                                 <i class = "fa fa-camera" style = "color: #fff;"></i>
 					</div>
 				</div>
@@ -151,11 +152,11 @@
                                   <i class="fas fa-angle-down"></i>
                                 </div>
                                 <div class="options-list">
-                                  <div class="option">Restaurant</div>
-                                  <div class="option">Patisserie</div>
-                                  <div class="option">Cafeteria</div>
-                                  <div class="option">Boulangerie</div>
-                                  <div class="option">Snack</div>
+                                  <div class="option" data-value="Restaurant">Restaurant</div>
+                                  <div class="option" data-value="Patisserie">Patisserie</div>
+                                  <div class="option" data-value="Cafeteria">Cafeteria</div>
+                                  <div class="option" data-value="Boulangerie">Boulangerie</div>
+                                  <div class="option" data-value="Snack">Snack</div>
                                 </div>
                             </div>
                             <input type="hidden" name="activity" id="activity">
